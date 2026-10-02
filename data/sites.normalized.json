@@ -1,0 +1,4992 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "exported_at": "2026-09-21",
+    "country": "Republic of Vessmark (fictional)",
+    "policy": {
+      "name": "precision_first_v1",
+      "headroom_unit": "MW",
+      "distance_unit": "km",
+      "area_unit": "m2",
+      "grid_precedence": "official_gridmap; vendor is contextual evidence only",
+      "missing_values": "null; no imputation or positive evidence from absence",
+      "area": "registry parcel area is an explicit usable-area proxy unless contradicted",
+      "owner_status": "latest dated explicit evidence; same-date conflicts remain unknown",
+      "sentiment": "latest per actor and scope; opposition wins across actors; conditional stays unknown",
+      "duplicates": "same region/parcel/type, identical sources, within 0.1 km; lowest ID is canonical",
+      "eligibility": "exclude protected sites and current owner refusal; hold unknown critical inputs or conflicts",
+      "unknown_sentiment": "retain for scoring with null sentiment; score must expose incompleteness",
+      "reference_size": "no additional 2 MW minimum or new flood/opposition kill rules"
+    },
+    "inputs": {
+      "sites_sha256": "fb2eb984bad465726e05c933ef52241cbf8bece56a4db82bf81d81e2a1caed84",
+      "extractions_sha256": "ba14507481f6df2e6aaa0441e3533e0c24b3a3d81ce2b924010a37895a4876be",
+      "fetch_log_sha256": "64d9d95593ed50f674bcb257dbc990c38040108330a3a927c52f908c5a64f0ad"
+    },
+    "extraction_model": "claude-opus-5",
+    "summary": {
+      "raw_records": 40,
+      "physical_opportunities": 39,
+      "duplicate_records_merged": 1,
+      "eligible": 23,
+      "held": 14,
+      "excluded": 2,
+      "complete_scoring_inputs": 14,
+      "observations_preserved": 106
+    }
+  },
+  "sites": [
+    {
+      "site_id": "S-001",
+      "name": "Brisk Lane Yard",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "parcel_id": "AL-1013",
+      "grid_ref_km": {
+        "x": 50.3,
+        "y": 36.1
+      },
+      "source_site_ids": [
+        "S-001"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-001",
+          "name": "Brisk Lane Yard",
+          "grid_ref_km": {
+            "x": 50.3,
+            "y": 36.1
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.3,
+        "substation_distance_km": 4.1,
+        "owner_status": "in_talks",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 1300
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 4.1,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.3
+        },
+        "landreg": {
+          "area_m2": 1300,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 2.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2.3,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-001:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-001:observation:0",
+            "date": "2026-09-17",
+            "author": "JK",
+            "source_site_id": "S-001"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-09-17",
+            "note_id": "S-001:0",
+            "source_site_id": "S-001",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "community_group",
+            "scope": "local energy co-op letter to the council backing the project",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_document",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-001:1",
+            "quote": "Local energy co-op wrote to the council backing the project.",
+            "observation_id": "S-001:observation:1",
+            "date": "2026-08-26",
+            "author": "JK",
+            "source_site_id": "S-001"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-001:1",
+          "text": "Local energy co-op wrote to the council backing the project.",
+          "date": "2026-08-26",
+          "author": "JK",
+          "source_site_id": "S-001",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-001:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-09-17",
+          "author": "JK",
+          "source_site_id": "S-001",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "community_group",
+          "scope": "local energy co-op letter to the council backing the project",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_document",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-001:1",
+          "quote": "Local energy co-op wrote to the council backing the project.",
+          "observation_id": "S-001:observation:1",
+          "date": "2026-08-26",
+          "author": "JK",
+          "source_site_id": "S-001"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-001:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-001:observation:0",
+          "date": "2026-09-17",
+          "author": "JK",
+          "source_site_id": "S-001"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-001:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-001:observation:0",
+          "date": "2026-09-17",
+          "author": "JK",
+          "source_site_id": "S-001"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-09-17",
+          "note_id": "S-001:0",
+          "source_site_id": "S-001",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-002",
+      "name": "Farrow Bridge Yard",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "parcel_id": "NH-4014",
+      "grid_ref_km": {
+        "x": 24.39,
+        "y": 66.79
+      },
+      "source_site_ids": [
+        "S-002"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-002",
+          "name": "Farrow Bridge Yard",
+          "grid_ref_km": {
+            "x": 24.39,
+            "y": 66.79
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.2,
+        "substation_distance_km": 1.3,
+        "owner_status": "in_talks",
+        "community_sentiment": "neutral",
+        "flood_zone": "low",
+        "usable_area_m2": 1500
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.2
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2200,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-002:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-002:observation:0",
+            "date": "2026-08-12",
+            "author": "AV",
+            "source_site_id": "S-002"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-12",
+            "note_id": "S-002:0",
+            "source_site_id": "S-002",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "neutral",
+            "actor": "residents",
+            "scope": "neighbours the author spoke to",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-002:1",
+            "quote": "Neighbours we spoke to were indifferent.",
+            "observation_id": "S-002:observation:1",
+            "date": "2026-08-13",
+            "author": "AV",
+            "source_site_id": "S-002"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-002:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-12",
+          "author": "AV",
+          "source_site_id": "S-002",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-002:1",
+          "text": "Neighbours we spoke to were indifferent.",
+          "date": "2026-08-13",
+          "author": "AV",
+          "source_site_id": "S-002",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-002:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-002:observation:0",
+          "date": "2026-08-12",
+          "author": "AV",
+          "source_site_id": "S-002"
+        },
+        {
+          "kind": "sentiment",
+          "value": "neutral",
+          "actor": "residents",
+          "scope": "neighbours the author spoke to",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-002:1",
+          "quote": "Neighbours we spoke to were indifferent.",
+          "observation_id": "S-002:observation:1",
+          "date": "2026-08-13",
+          "author": "AV",
+          "source_site_id": "S-002"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-002:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-002:observation:0",
+          "date": "2026-08-12",
+          "author": "AV",
+          "source_site_id": "S-002"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-12",
+          "note_id": "S-002:0",
+          "source_site_id": "S-002",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-003",
+      "name": "Kessby Old Quarry Yard",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "parcel_id": "AL-1043",
+      "grid_ref_km": {
+        "x": 12.4,
+        "y": 33.1
+      },
+      "source_site_ids": [
+        "S-003"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-003",
+          "name": "Kessby Old Quarry Yard",
+          "grid_ref_km": {
+            "x": 12.4,
+            "y": 33.1
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 4.6,
+        "substation_distance_km": 0.8,
+        "owner_status": "loi_signed",
+        "community_sentiment": "supportive",
+        "flood_zone": "low",
+        "usable_area_m2": 2100
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 4.6
+        },
+        "landreg": {
+          "area_m2": 2100,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-09-12"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 4.6,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent for this site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-003:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-003:observation:0",
+            "date": "2026-08-19",
+            "author": "MA",
+            "source_site_id": "S-003"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-08-19",
+            "note_id": "S-003:0",
+            "source_site_id": "S-003",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "council_body",
+            "scope": "council planning committee support for local storage on this plot, per minutes",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_document",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-003:1",
+            "quote": "Council planning committee minutes record support for local storage on this plot.",
+            "observation_id": "S-003:observation:2",
+            "date": "2026-09-03",
+            "author": "MA",
+            "source_site_id": "S-003"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-09-12"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-09-12",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-003:0",
+          "text": "Owner signed the letter of intent. Wants 12% revenue share.",
+          "date": "2026-08-19",
+          "author": "MA",
+          "source_site_id": "S-003",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-003:1",
+          "text": "Council planning committee minutes record support for local storage on this plot.",
+          "date": "2026-09-03",
+          "author": "MA",
+          "source_site_id": "S-003",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-003:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-003:observation:0",
+          "date": "2026-08-19",
+          "author": "MA",
+          "source_site_id": "S-003"
+        },
+        {
+          "kind": "commercial_term",
+          "value": "owner requests 12% revenue share",
+          "actor": "landowner",
+          "scope": "owner's requested commercial term",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": {
+            "value": 12.0,
+            "unit": "percent",
+            "precision": "as_stated",
+            "subject": "requested revenue share"
+          },
+          "event_time_text": null,
+          "note_id": "S-003:0",
+          "quote": "Owner signed the letter of intent. Wants 12% revenue share.",
+          "observation_id": "S-003:observation:1",
+          "date": "2026-08-19",
+          "author": "MA",
+          "source_site_id": "S-003",
+          "normalized_quantity": {
+            "value": 12.0,
+            "unit": "percent",
+            "precision": "as_stated",
+            "subject": "requested revenue share"
+          }
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "council_body",
+          "scope": "council planning committee support for local storage on this plot, per minutes",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_document",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-003:1",
+          "quote": "Council planning committee minutes record support for local storage on this plot.",
+          "observation_id": "S-003:observation:2",
+          "date": "2026-09-03",
+          "author": "MA",
+          "source_site_id": "S-003"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-003:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-003:observation:0",
+          "date": "2026-08-19",
+          "author": "MA",
+          "source_site_id": "S-003"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-08-19",
+          "note_id": "S-003:0",
+          "source_site_id": "S-003",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-005",
+      "name": "Dalby Works",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "parcel_id": "TR-1065",
+      "grid_ref_km": {
+        "x": 4.8,
+        "y": 37.0
+      },
+      "source_site_ids": [
+        "S-005"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-005",
+          "name": "Dalby Works",
+          "grid_ref_km": {
+            "x": 4.8,
+            "y": 37.0
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.6,
+        "substation_distance_km": 2.0,
+        "owner_status": "in_talks",
+        "community_sentiment": null,
+        "flood_zone": "low",
+        "usable_area_m2": 1800
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.0,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.6
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.8,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2.6,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-005:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-005:observation:0",
+            "date": "2026-08-19",
+            "author": "RS",
+            "source_site_id": "S-005"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-19",
+            "note_id": "S-005:0",
+            "source_site_id": "S-005",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-005:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-005",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-005:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-005:observation:0",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-005"
+        },
+        {
+          "kind": "follow_up",
+          "value": "send heads of terms to owner",
+          "actor": "author",
+          "scope": "follow-up after first owner call",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-005:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-005:observation:1",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-005"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-005:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-005:observation:0",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-005"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-19",
+          "note_id": "S-005:0",
+          "source_site_id": "S-005",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-006",
+      "name": "Ulven Works Site",
+      "region": "Nordholm",
+      "site_type": "brownfield",
+      "parcel_id": "NH-4042",
+      "grid_ref_km": {
+        "x": 27.4,
+        "y": 55.41
+      },
+      "source_site_ids": [
+        "S-006"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-006",
+          "name": "Ulven Works Site",
+          "grid_ref_km": {
+            "x": 27.4,
+            "y": 55.41
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.7,
+        "substation_distance_km": 0.6,
+        "owner_status": "loi_signed",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 2300
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.6,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.7
+        },
+        "landreg": {
+          "area_m2": 2300,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1700,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent for this site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-006:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-006:observation:0",
+            "date": "2026-08-16",
+            "author": "AV",
+            "source_site_id": "S-006"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-08-16",
+            "note_id": "S-006:0",
+            "source_site_id": "S-006",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "council_body",
+            "scope": "council planning committee, support for local storage on this plot",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_document",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-006:1",
+            "quote": "Council planning committee minutes record support for local storage on this plot.",
+            "observation_id": "S-006:observation:1",
+            "date": "2026-08-17",
+            "author": "AV",
+            "source_site_id": "S-006"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-006:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-08-16",
+          "author": "AV",
+          "source_site_id": "S-006",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-006:1",
+          "text": "Council planning committee minutes record support for local storage on this plot.",
+          "date": "2026-08-17",
+          "author": "AV",
+          "source_site_id": "S-006",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-006:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-006:observation:0",
+          "date": "2026-08-16",
+          "author": "AV",
+          "source_site_id": "S-006"
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "council_body",
+          "scope": "council planning committee, support for local storage on this plot",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_document",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-006:1",
+          "quote": "Council planning committee minutes record support for local storage on this plot.",
+          "observation_id": "S-006:observation:1",
+          "date": "2026-08-17",
+          "author": "AV",
+          "source_site_id": "S-006"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-006:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-006:observation:0",
+          "date": "2026-08-16",
+          "author": "AV",
+          "source_site_id": "S-006"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-08-16",
+          "note_id": "S-006:0",
+          "source_site_id": "S-006",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-007",
+      "name": "Tallow Cross Brownfield",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "parcel_id": "AL-1066",
+      "grid_ref_km": {
+        "x": 13.0,
+        "y": 27.7
+      },
+      "source_site_ids": [
+        "S-007"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-007",
+          "name": "Tallow Cross Brownfield",
+          "grid_ref_km": {
+            "x": 13.0,
+            "y": 27.7
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.6,
+        "substation_distance_km": 0.7,
+        "owner_status": "loi_signed",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 2000
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.7,
+          "data_as_of": "2026-03-31",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.6
+        },
+        "landreg": {
+          "area_m2": 2000,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 5.2,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1.6,
+          "raw_unit": "MW",
+          "data_as_of": "2026-03-31"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent for the site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-007:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-007:observation:0",
+            "date": "2026-08-22",
+            "author": "MA",
+            "source_site_id": "S-007"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-08-22",
+            "note_id": "S-007:0",
+            "source_site_id": "S-007",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "councillor",
+            "scope": "ward councillor's personal position",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-007:1",
+            "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+            "observation_id": "S-007:observation:1",
+            "date": "2026-08-22",
+            "author": "MA",
+            "source_site_id": "S-007"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-007:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-007:1",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-007:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-007:observation:0",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007"
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "councillor",
+          "scope": "ward councillor's personal position",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-007:1",
+          "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "observation_id": "S-007:observation:1",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007"
+        },
+        {
+          "kind": "follow_up",
+          "value": "Ward councillor offered to speak at the hearing",
+          "actor": "councillor",
+          "scope": "upcoming hearing",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-007:1",
+          "quote": "she is openly in favour and offered to speak at the hearing",
+          "observation_id": "S-007:observation:2",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-007:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-007:observation:0",
+          "date": "2026-08-22",
+          "author": "MA",
+          "source_site_id": "S-007"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-08-22",
+          "note_id": "S-007:0",
+          "source_site_id": "S-007",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy",
+        "official_grid_predates_latest_dataset_quarter",
+        "vendor_differs_from_official_grid; official_retained",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-010",
+      "name": "Eller Road Plot",
+      "region": "Aldmark",
+      "site_type": "depot_yard",
+      "parcel_id": "AL-1130",
+      "grid_ref_km": {
+        "x": 75.7,
+        "y": 15.8
+      },
+      "source_site_ids": [
+        "S-010"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-010",
+          "name": "Eller Road Plot",
+          "grid_ref_km": {
+            "x": 75.7,
+            "y": 15.8
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 3.9,
+        "substation_distance_km": 2.4,
+        "owner_status": "loi_signed",
+        "community_sentiment": null,
+        "flood_zone": "high",
+        "usable_area_m2": 1800
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 3.9
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "high",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 3.9,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-010:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-010:observation:0",
+            "date": "2026-07-17",
+            "author": "RS",
+            "source_site_id": "S-010"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-07-17",
+            "note_id": "S-010:0",
+            "source_site_id": "S-010",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "unknown",
+            "actor": "council_body",
+            "scope": "council formal position on the project",
+            "statement_status": "unclear",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-010:1",
+            "quote": "Council has no formal position yet",
+            "observation_id": "S-010:observation:1",
+            "date": "2026-08-23",
+            "author": "RS",
+            "source_site_id": "S-010"
+          },
+          {
+            "kind": "sentiment",
+            "value": "conditional",
+            "actor": "council_officer",
+            "scope": "officer's position conditioned on the noise report",
+            "statement_status": "qualified",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-010:1",
+            "quote": "officer said 'depends on the noise report'",
+            "observation_id": "S-010:observation:2",
+            "date": "2026-08-23",
+            "author": "RS",
+            "source_site_id": "S-010"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-010:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-07-17",
+          "author": "RS",
+          "source_site_id": "S-010",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-010:1",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'.",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-010",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-010:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-010:observation:0",
+          "date": "2026-07-17",
+          "author": "RS",
+          "source_site_id": "S-010"
+        },
+        {
+          "kind": "sentiment",
+          "value": "unknown",
+          "actor": "council_body",
+          "scope": "council formal position on the project",
+          "statement_status": "unclear",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-010:1",
+          "quote": "Council has no formal position yet",
+          "observation_id": "S-010:observation:1",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-010"
+        },
+        {
+          "kind": "sentiment",
+          "value": "conditional",
+          "actor": "council_officer",
+          "scope": "officer's position conditioned on the noise report",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-010:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-010:observation:2",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-010"
+        },
+        {
+          "kind": "follow_up",
+          "value": "noise report required as condition for officer's position",
+          "actor": "council_officer",
+          "scope": "noise report condition raised by officer",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-010:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-010:observation:3",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-010"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-010:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-010:observation:0",
+          "date": "2026-07-17",
+          "author": "RS",
+          "source_site_id": "S-010"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-07-17",
+          "note_id": "S-010:0",
+          "source_site_id": "S-010",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "high_flood_risk"
+      ]
+    },
+    {
+      "site_id": "S-012",
+      "name": "Nesby Rail Sidings",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "parcel_id": "NH-4084",
+      "grid_ref_km": {
+        "x": 20.49,
+        "y": 67.87
+      },
+      "source_site_ids": [
+        "S-012"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-012",
+          "name": "Nesby Rail Sidings",
+          "grid_ref_km": {
+            "x": 20.49,
+            "y": 67.87
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.8,
+        "substation_distance_km": 2.2,
+        "owner_status": "in_talks",
+        "community_sentiment": null,
+        "flood_zone": "medium",
+        "usable_area_m2": 1900
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.2,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.8
+        },
+        "landreg": {
+          "area_m2": 1900,
+          "flood_zone": "medium",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1800,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-012:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-012:observation:0",
+            "date": "2026-08-22",
+            "author": "AV",
+            "source_site_id": "S-012"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-22",
+            "note_id": "S-012:0",
+            "source_site_id": "S-012",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-012:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-012",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-012:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-012:observation:0",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-012"
+        },
+        {
+          "kind": "follow_up",
+          "value": "send heads of terms to the owner",
+          "actor": "author",
+          "scope": "follow-up after first call with owner",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-012:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-012:observation:1",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-012"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-012:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-012:observation:0",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-012"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-22",
+          "note_id": "S-012:0",
+          "source_site_id": "S-012",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-014",
+      "name": "Orlund Depot Yard",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "parcel_id": "SV-2108",
+      "grid_ref_km": {
+        "x": 40.2,
+        "y": 11.7
+      },
+      "source_site_ids": [
+        "S-014"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-014",
+          "name": "Orlund Depot Yard",
+          "grid_ref_km": {
+            "x": 40.2,
+            "y": 11.7
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 4.1,
+        "substation_distance_km": 1.4,
+        "owner_status": "in_talks",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 1600
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 4.1
+        },
+        "landreg": {
+          "area_m2": 1600,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 4.1,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-014:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-014:observation:0",
+            "date": "2026-09-11",
+            "author": "JK",
+            "source_site_id": "S-014"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-09-11",
+            "note_id": "S-014:0",
+            "source_site_id": "S-014",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "councillor",
+            "scope": "ward councillor's personal position",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-014:1",
+            "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+            "observation_id": "S-014:observation:2",
+            "date": "2026-08-02",
+            "author": "JK",
+            "source_site_id": "S-014"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-014:1",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "date": "2026-08-02",
+          "author": "JK",
+          "source_site_id": "S-014",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-014:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-09-11",
+          "author": "JK",
+          "source_site_id": "S-014",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "councillor",
+          "scope": "ward councillor's personal position",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-014:1",
+          "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "observation_id": "S-014:observation:2",
+          "date": "2026-08-02",
+          "author": "JK",
+          "source_site_id": "S-014"
+        },
+        {
+          "kind": "follow_up",
+          "value": "councillor offered to speak at the hearing",
+          "actor": "councillor",
+          "scope": "ward councillor speaking at hearing",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-014:1",
+          "quote": "she is openly in favour and offered to speak at the hearing",
+          "observation_id": "S-014:observation:3",
+          "date": "2026-08-02",
+          "author": "JK",
+          "source_site_id": "S-014"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-014:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-014:observation:0",
+          "date": "2026-09-11",
+          "author": "JK",
+          "source_site_id": "S-014"
+        },
+        {
+          "kind": "follow_up",
+          "value": "send heads of terms to owner",
+          "actor": "author",
+          "scope": "heads of terms to be sent to owner",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-014:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-014:observation:1",
+          "date": "2026-09-11",
+          "author": "JK",
+          "source_site_id": "S-014"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-014:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-014:observation:0",
+          "date": "2026-09-11",
+          "author": "JK",
+          "source_site_id": "S-014"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-09-11",
+          "note_id": "S-014:0",
+          "source_site_id": "S-014",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-016",
+      "name": "Glaze Farm Edge",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "parcel_id": "TR-1208",
+      "grid_ref_km": {
+        "x": 44.1,
+        "y": 47.4
+      },
+      "source_site_ids": [
+        "S-016"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-016",
+          "name": "Glaze Farm Edge",
+          "grid_ref_km": {
+            "x": 44.1,
+            "y": 47.4
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 3.5,
+        "substation_distance_km": 2.3,
+        "owner_status": "in_talks",
+        "community_sentiment": null,
+        "flood_zone": "low",
+        "usable_area_m2": 1500
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 3.5
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.1,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 3.5,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-016:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-016:observation:0",
+            "date": "2026-09-02",
+            "author": "RS",
+            "source_site_id": "S-016"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-09-02",
+            "note_id": "S-016:0",
+            "source_site_id": "S-016",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "unknown",
+            "actor": "council_body",
+            "scope": "council's formal position on the project",
+            "statement_status": "unclear",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-016:1",
+            "quote": "Council has no formal position yet",
+            "observation_id": "S-016:observation:2",
+            "date": "2026-08-19",
+            "author": "RS",
+            "source_site_id": "S-016"
+          },
+          {
+            "kind": "sentiment",
+            "value": "conditional",
+            "actor": "council_officer",
+            "scope": "officer's position contingent on the noise report",
+            "statement_status": "qualified",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-016:1",
+            "quote": "officer said 'depends on the noise report'",
+            "observation_id": "S-016:observation:3",
+            "date": "2026-08-19",
+            "author": "RS",
+            "source_site_id": "S-016"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-016:1",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'.",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-016",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-016:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-016",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "sentiment",
+          "value": "unknown",
+          "actor": "council_body",
+          "scope": "council's formal position on the project",
+          "statement_status": "unclear",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:1",
+          "quote": "Council has no formal position yet",
+          "observation_id": "S-016:observation:2",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-016"
+        },
+        {
+          "kind": "sentiment",
+          "value": "conditional",
+          "actor": "council_officer",
+          "scope": "officer's position contingent on the noise report",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-016:observation:3",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-016"
+        },
+        {
+          "kind": "follow_up",
+          "value": "Noise report required; officer's position depends on it",
+          "actor": "council_officer",
+          "scope": "noise report condition stated by officer",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-016:observation:4",
+          "date": "2026-08-19",
+          "author": "RS",
+          "source_site_id": "S-016"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-016:observation:0",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-016"
+        },
+        {
+          "kind": "follow_up",
+          "value": "Heads of terms to be sent to the owner",
+          "actor": "author",
+          "scope": "landowner negotiation next step",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-016:observation:1",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-016"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-016:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-016:observation:0",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-016"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-09-02",
+          "note_id": "S-016:0",
+          "source_site_id": "S-016",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-017",
+      "name": "Brekke Depot",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "parcel_id": "SV-2291",
+      "grid_ref_km": {
+        "x": 41.2,
+        "y": 17.85
+      },
+      "source_site_ids": [
+        "S-017",
+        "S-031"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-017",
+          "name": "Brekke Depot",
+          "grid_ref_km": {
+            "x": 41.2,
+            "y": 17.85
+          }
+        },
+        {
+          "site_id": "S-031",
+          "name": "Brekke Municipal Depot",
+          "grid_ref_km": {
+            "x": 41.23,
+            "y": 17.83
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 4.7,
+        "substation_distance_km": 0.9,
+        "owner_status": "loi_signed",
+        "community_sentiment": "neutral",
+        "flood_zone": "none",
+        "usable_area_m2": 1800
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 4.7
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 4.7,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner agreement for the site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-031:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-031:observation:0",
+            "date": "2026-09-08",
+            "author": "AV",
+            "source_site_id": "S-031"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-09-08",
+            "note_id": "S-031:0",
+            "source_site_id": "S-031",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "neutral",
+            "actor": "residents",
+            "scope": "neighbours spoken to",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-017:1",
+            "quote": "Neighbours we spoke to were indifferent.",
+            "observation_id": "S-017:observation:2",
+            "date": "2026-07-02",
+            "author": "JK",
+            "source_site_id": "S-017"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-017:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-017:1",
+          "text": "Neighbours we spoke to were indifferent.",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-031:0",
+          "text": "Owner signed the letter of intent. (Brekke depot, finally.)",
+          "date": "2026-09-08",
+          "author": "AV",
+          "source_site_id": "S-031",
+          "owner_status": "loi_signed"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-017:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-017:observation:0",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017"
+        },
+        {
+          "kind": "follow_up",
+          "value": "Heads of terms to be sent to the owner",
+          "actor": "author",
+          "scope": "next step after first owner call",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-017:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-017:observation:1",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017"
+        },
+        {
+          "kind": "sentiment",
+          "value": "neutral",
+          "actor": "residents",
+          "scope": "neighbours spoken to",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-017:1",
+          "quote": "Neighbours we spoke to were indifferent.",
+          "observation_id": "S-017:observation:2",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner agreement for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-031:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-031:observation:0",
+          "date": "2026-09-08",
+          "author": "AV",
+          "source_site_id": "S-031"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-017:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-017:observation:0",
+          "date": "2026-07-02",
+          "author": "JK",
+          "source_site_id": "S-017"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-07-02",
+          "note_id": "S-017:0",
+          "source_site_id": "S-017",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner agreement for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-031:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-031:observation:0",
+          "date": "2026-09-08",
+          "author": "AV",
+          "source_site_id": "S-031"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-09-08",
+          "note_id": "S-031:0",
+          "source_site_id": "S-031",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-018",
+      "name": "Grelle Harbour Plot",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "parcel_id": "NH-4126",
+      "grid_ref_km": {
+        "x": 28.72,
+        "y": 62.28
+      },
+      "source_site_ids": [
+        "S-018"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-018",
+          "name": "Grelle Harbour Plot",
+          "grid_ref_km": {
+            "x": 28.72,
+            "y": 62.28
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 4.6,
+        "substation_distance_km": 0.8,
+        "owner_status": "loi_signed",
+        "community_sentiment": "supportive",
+        "flood_zone": "low",
+        "usable_area_m2": 1700
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 4.6
+        },
+        "landreg": {
+          "area_m2": 1700,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 4600,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent for this site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-018:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-018:observation:0",
+            "date": "2026-08-10",
+            "author": "AV",
+            "source_site_id": "S-018"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-08-10",
+            "note_id": "S-018:0",
+            "source_site_id": "S-018",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "council_body",
+            "scope": "council planning committee, support for local storage on this plot",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_document",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-018:1",
+            "quote": "Council planning committee minutes record support for local storage on this plot.",
+            "observation_id": "S-018:observation:1",
+            "date": "2026-08-12",
+            "author": "AV",
+            "source_site_id": "S-018"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-018:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-08-10",
+          "author": "AV",
+          "source_site_id": "S-018",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-018:1",
+          "text": "Council planning committee minutes record support for local storage on this plot.",
+          "date": "2026-08-12",
+          "author": "AV",
+          "source_site_id": "S-018",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-018:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-018:observation:0",
+          "date": "2026-08-10",
+          "author": "AV",
+          "source_site_id": "S-018"
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "council_body",
+          "scope": "council planning committee, support for local storage on this plot",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_document",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-018:1",
+          "quote": "Council planning committee minutes record support for local storage on this plot.",
+          "observation_id": "S-018:observation:1",
+          "date": "2026-08-12",
+          "author": "AV",
+          "source_site_id": "S-018"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent for this site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-018:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-018:observation:0",
+          "date": "2026-08-10",
+          "author": "AV",
+          "source_site_id": "S-018"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-08-10",
+          "note_id": "S-018:0",
+          "source_site_id": "S-018",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-021",
+      "name": "Selby Quay Yard",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "parcel_id": "SV-2203",
+      "grid_ref_km": {
+        "x": 47.5,
+        "y": 13.3
+      },
+      "source_site_ids": [
+        "S-021"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-021",
+          "name": "Selby Quay Yard",
+          "grid_ref_km": {
+            "x": 47.5,
+            "y": 13.3
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.4,
+        "substation_distance_km": 1.8,
+        "owner_status": "in_talks",
+        "community_sentiment": null,
+        "flood_zone": "low",
+        "usable_area_m2": 1700
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.8,
+          "data_as_of": "2026-03-31",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.4
+        },
+        "landreg": {
+          "area_m2": 1700,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.9,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2.4,
+          "raw_unit": "MW",
+          "data_as_of": "2026-03-31"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-021:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-021:observation:0",
+            "date": "2026-08-30",
+            "author": "JK",
+            "source_site_id": "S-021"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-30",
+            "note_id": "S-021:0",
+            "source_site_id": "S-021",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "unknown",
+            "actor": "council_body",
+            "scope": "council formal position on the project",
+            "statement_status": "unclear",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-021:1",
+            "quote": "Council has no formal position yet",
+            "observation_id": "S-021:observation:2",
+            "date": "2026-08-30",
+            "author": "JK",
+            "source_site_id": "S-021"
+          },
+          {
+            "kind": "sentiment",
+            "value": "conditional",
+            "actor": "council_officer",
+            "scope": "officer position conditioned on the noise report",
+            "statement_status": "qualified",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-021:1",
+            "quote": "officer said 'depends on the noise report'",
+            "observation_id": "S-021:observation:3",
+            "date": "2026-08-30",
+            "author": "JK",
+            "source_site_id": "S-021"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-021:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-021:1",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'.",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-021:observation:0",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        },
+        {
+          "kind": "follow_up",
+          "value": "heads of terms to be sent to owner",
+          "actor": "author",
+          "scope": "landowner negotiation next step",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-021:observation:1",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        },
+        {
+          "kind": "sentiment",
+          "value": "unknown",
+          "actor": "council_body",
+          "scope": "council formal position on the project",
+          "statement_status": "unclear",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:1",
+          "quote": "Council has no formal position yet",
+          "observation_id": "S-021:observation:2",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        },
+        {
+          "kind": "sentiment",
+          "value": "conditional",
+          "actor": "council_officer",
+          "scope": "officer position conditioned on the noise report",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-021:observation:3",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        },
+        {
+          "kind": "follow_up",
+          "value": "noise report required; officer's position depends on it",
+          "actor": "council_officer",
+          "scope": "noise report condition raised by council officer",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-021:observation:4",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-021:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-021:observation:0",
+          "date": "2026-08-30",
+          "author": "JK",
+          "source_site_id": "S-021"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-30",
+          "note_id": "S-021:0",
+          "source_site_id": "S-021",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "official_grid_predates_latest_dataset_quarter",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-023",
+      "name": "Hask Common",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "parcel_id": "NH-4161",
+      "grid_ref_km": {
+        "x": 21.25,
+        "y": 68.69
+      },
+      "source_site_ids": [
+        "S-023"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-023",
+          "name": "Hask Common",
+          "grid_ref_km": {
+            "x": 21.25,
+            "y": 68.69
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 0.95,
+        "substation_distance_km": 3.4,
+        "owner_status": "not_contacted",
+        "community_sentiment": null,
+        "flood_zone": "none",
+        "usable_area_m2": 2600
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 3.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 0.95
+        },
+        "landreg": {
+          "area_m2": 2600,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 950,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "not_contacted",
+            "actor": "landowner",
+            "scope": "owner contact status",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-023:0",
+            "quote": "Owner not contacted yet.",
+            "observation_id": "S-023:observation:0",
+            "date": "2026-08-15",
+            "author": "AV",
+            "source_site_id": "S-023"
+          },
+          {
+            "kind": "owner_status",
+            "value": "not_contacted",
+            "date": "2026-08-15",
+            "note_id": "S-023:0",
+            "source_site_id": "S-023",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-023:0",
+          "text": "Owner not contacted yet.",
+          "date": "2026-08-15",
+          "author": "AV",
+          "source_site_id": "S-023",
+          "owner_status": "not_contacted"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "actor": "landowner",
+          "scope": "owner contact status",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-023:0",
+          "quote": "Owner not contacted yet.",
+          "observation_id": "S-023:observation:0",
+          "date": "2026-08-15",
+          "author": "AV",
+          "source_site_id": "S-023"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "actor": "landowner",
+          "scope": "owner contact status",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-023:0",
+          "quote": "Owner not contacted yet.",
+          "observation_id": "S-023:observation:0",
+          "date": "2026-08-15",
+          "author": "AV",
+          "source_site_id": "S-023"
+        },
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "date": "2026-08-15",
+          "note_id": "S-023:0",
+          "source_site_id": "S-023",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-025",
+      "name": "Ingle Street Yard",
+      "region": "Sveld",
+      "site_type": "brownfield",
+      "parcel_id": "SV-1325",
+      "grid_ref_km": {
+        "x": 51.2,
+        "y": 53.1
+      },
+      "source_site_ids": [
+        "S-025"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-025",
+          "name": "Ingle Street Yard",
+          "grid_ref_km": {
+            "x": 51.2,
+            "y": 53.1
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.0,
+        "substation_distance_km": 1.7,
+        "owner_status": "in_talks",
+        "community_sentiment": "supportive",
+        "flood_zone": "medium",
+        "usable_area_m2": 900
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.7,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.0
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "medium",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.7,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2.0,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-025:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-025:observation:0",
+            "date": "2026-09-04",
+            "author": "JK",
+            "source_site_id": "S-025"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-09-04",
+            "note_id": "S-025:0",
+            "source_site_id": "S-025",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "community_group",
+            "scope": "local energy co-op letter to the council backing the project",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-025:1",
+            "quote": "Local energy co-op wrote to the council backing the project.",
+            "observation_id": "S-025:observation:1",
+            "date": "2026-08-07",
+            "author": "JK",
+            "source_site_id": "S-025"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-025:1",
+          "text": "Local energy co-op wrote to the council backing the project.",
+          "date": "2026-08-07",
+          "author": "JK",
+          "source_site_id": "S-025",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-025:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-09-04",
+          "author": "JK",
+          "source_site_id": "S-025",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "community_group",
+          "scope": "local energy co-op letter to the council backing the project",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-025:1",
+          "quote": "Local energy co-op wrote to the council backing the project.",
+          "observation_id": "S-025:observation:1",
+          "date": "2026-08-07",
+          "author": "JK",
+          "source_site_id": "S-025"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-025:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-025:observation:0",
+          "date": "2026-09-04",
+          "author": "JK",
+          "source_site_id": "S-025"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-025:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-025:observation:0",
+          "date": "2026-09-04",
+          "author": "JK",
+          "source_site_id": "S-025"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-09-04",
+          "note_id": "S-025:0",
+          "source_site_id": "S-025",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-027",
+      "name": "Varne Farm Edge",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "parcel_id": "TR-3317",
+      "grid_ref_km": {
+        "x": 71.9,
+        "y": 44.0
+      },
+      "source_site_ids": [
+        "S-027"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-027",
+          "name": "Varne Farm Edge",
+          "grid_ref_km": {
+            "x": 71.9,
+            "y": 44.0
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 5.5,
+        "substation_distance_km": 0.5,
+        "owner_status": "loi_signed",
+        "community_sentiment": null,
+        "flood_zone": "low",
+        "usable_area_m2": 1400
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.5,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 5.5
+        },
+        "landreg": {
+          "area_m2": 1400,
+          "flood_zone": "low",
+          "owner_type": "private",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 5.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 5.5,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-027:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-027:observation:0",
+            "date": "2026-07-30",
+            "author": "RS",
+            "source_site_id": "S-027"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-07-30",
+            "note_id": "S-027:0",
+            "source_site_id": "S-027",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "unknown",
+            "actor": "council_body",
+            "scope": "council formal position on the project",
+            "statement_status": "unclear",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-027:1",
+            "quote": "Council has no formal position yet",
+            "observation_id": "S-027:observation:1",
+            "date": "2026-08-21",
+            "author": "RS",
+            "source_site_id": "S-027"
+          },
+          {
+            "kind": "sentiment",
+            "value": "conditional",
+            "actor": "council_officer",
+            "scope": "council officer position conditional on noise report",
+            "statement_status": "qualified",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-027:1",
+            "quote": "officer said 'depends on the noise report'",
+            "observation_id": "S-027:observation:2",
+            "date": "2026-08-21",
+            "author": "RS",
+            "source_site_id": "S-027"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-027:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-07-30",
+          "author": "RS",
+          "source_site_id": "S-027",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-027:1",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'.",
+          "date": "2026-08-21",
+          "author": "RS",
+          "source_site_id": "S-027",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-027:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-027:observation:0",
+          "date": "2026-07-30",
+          "author": "RS",
+          "source_site_id": "S-027"
+        },
+        {
+          "kind": "sentiment",
+          "value": "unknown",
+          "actor": "council_body",
+          "scope": "council formal position on the project",
+          "statement_status": "unclear",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-027:1",
+          "quote": "Council has no formal position yet",
+          "observation_id": "S-027:observation:1",
+          "date": "2026-08-21",
+          "author": "RS",
+          "source_site_id": "S-027"
+        },
+        {
+          "kind": "sentiment",
+          "value": "conditional",
+          "actor": "council_officer",
+          "scope": "council officer position conditional on noise report",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-027:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-027:observation:2",
+          "date": "2026-08-21",
+          "author": "RS",
+          "source_site_id": "S-027"
+        },
+        {
+          "kind": "follow_up",
+          "value": "noise report required for council officer's position",
+          "actor": "council_officer",
+          "scope": "noise report condition raised by officer",
+          "statement_status": "qualified",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-027:1",
+          "quote": "officer said 'depends on the noise report'",
+          "observation_id": "S-027:observation:3",
+          "date": "2026-08-21",
+          "author": "RS",
+          "source_site_id": "S-027"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-027:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-027:observation:0",
+          "date": "2026-07-30",
+          "author": "RS",
+          "source_site_id": "S-027"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-07-30",
+          "note_id": "S-027:0",
+          "source_site_id": "S-027",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-028",
+      "name": "Jessop Common",
+      "region": "Tarrow",
+      "site_type": "depot_yard",
+      "parcel_id": "TR-1364",
+      "grid_ref_km": {
+        "x": 50.9,
+        "y": 39.6
+      },
+      "source_site_ids": [
+        "S-028"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-028",
+          "name": "Jessop Common",
+          "grid_ref_km": {
+            "x": 50.9,
+            "y": 39.6
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.9,
+        "substation_distance_km": 2.3,
+        "owner_status": "loi_signed",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 1100
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.9
+        },
+        "landreg": {
+          "area_m2": 1100,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.8,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1.9,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "actor": "landowner",
+            "scope": "landowner letter of intent",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-028:0",
+            "quote": "Owner signed the letter of intent.",
+            "observation_id": "S-028:observation:0",
+            "date": "2026-07-18",
+            "author": "MA",
+            "source_site_id": "S-028"
+          },
+          {
+            "kind": "owner_status",
+            "value": "loi_signed",
+            "date": "2026-07-18",
+            "note_id": "S-028:0",
+            "source_site_id": "S-028",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "community_group",
+            "scope": "local energy co-op letter to the council backing the project",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_document",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-028:1",
+            "quote": "Local energy co-op wrote to the council backing the project.",
+            "observation_id": "S-028:observation:1",
+            "date": "2026-08-27",
+            "author": "MA",
+            "source_site_id": "S-028"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-028:0",
+          "text": "Owner signed the letter of intent.",
+          "date": "2026-07-18",
+          "author": "MA",
+          "source_site_id": "S-028",
+          "owner_status": "loi_signed"
+        },
+        {
+          "note_id": "S-028:1",
+          "text": "Local energy co-op wrote to the council backing the project.",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-028",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-028:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-028:observation:0",
+          "date": "2026-07-18",
+          "author": "MA",
+          "source_site_id": "S-028"
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "community_group",
+          "scope": "local energy co-op letter to the council backing the project",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_document",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-028:1",
+          "quote": "Local energy co-op wrote to the council backing the project.",
+          "observation_id": "S-028:observation:1",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-028"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "actor": "landowner",
+          "scope": "landowner letter of intent",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-028:0",
+          "quote": "Owner signed the letter of intent.",
+          "observation_id": "S-028:observation:0",
+          "date": "2026-07-18",
+          "author": "MA",
+          "source_site_id": "S-028"
+        },
+        {
+          "kind": "owner_status",
+          "value": "loi_signed",
+          "date": "2026-07-18",
+          "note_id": "S-028:0",
+          "source_site_id": "S-028",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-030",
+      "name": "Tofte Industrial Estate",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "parcel_id": "NH-4210",
+      "grid_ref_km": {
+        "x": 31.95,
+        "y": 68.04
+      },
+      "source_site_ids": [
+        "S-030"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-030",
+          "name": "Tofte Industrial Estate",
+          "grid_ref_km": {
+            "x": 31.95,
+            "y": 68.04
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 2.9,
+        "substation_distance_km": 1.1,
+        "owner_status": "in_talks",
+        "community_sentiment": "opposed",
+        "flood_zone": "none",
+        "usable_area_m2": 1350
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.1,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 2.9
+        },
+        "landreg": {
+          "area_m2": 1350,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 2900,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-030:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-030:observation:0",
+            "date": "2026-08-22",
+            "author": "AV",
+            "source_site_id": "S-030"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-22",
+            "note_id": "S-030:0",
+            "source_site_id": "S-030",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "opposed",
+            "actor": "community_group",
+            "scope": "residents' association petition against batteries next to the school",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-030:1",
+            "quote": "Residents' association has started a petition against 'industrial batteries' next to the school.",
+            "observation_id": "S-030:observation:1",
+            "date": "2026-08-24",
+            "author": "AV",
+            "source_site_id": "S-030"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-030:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-030",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-030:1",
+          "text": "Residents' association has started a petition against 'industrial batteries' next to the school.",
+          "date": "2026-08-24",
+          "author": "AV",
+          "source_site_id": "S-030",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-030:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-030:observation:0",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-030"
+        },
+        {
+          "kind": "sentiment",
+          "value": "opposed",
+          "actor": "community_group",
+          "scope": "residents' association petition against batteries next to the school",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-030:1",
+          "quote": "Residents' association has started a petition against 'industrial batteries' next to the school.",
+          "observation_id": "S-030:observation:1",
+          "date": "2026-08-24",
+          "author": "AV",
+          "source_site_id": "S-030"
+        },
+        {
+          "kind": "site_condition",
+          "value": "Site is next to a school, cited as a siting concern in resident opposition",
+          "actor": "community_group",
+          "scope": "proximity of proposed batteries to the school",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-030:1",
+          "quote": "Residents' association has started a petition against 'industrial batteries' next to the school.",
+          "observation_id": "S-030:observation:2",
+          "date": "2026-08-24",
+          "author": "AV",
+          "source_site_id": "S-030"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-030:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-030:observation:0",
+          "date": "2026-08-22",
+          "author": "AV",
+          "source_site_id": "S-030"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-22",
+          "note_id": "S-030:0",
+          "source_site_id": "S-030",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "explicit_opposition",
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-032",
+      "name": "Ashcombe Field Corner",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "parcel_id": "TR-3301",
+      "grid_ref_km": {
+        "x": 69.4,
+        "y": 41.2
+      },
+      "source_site_ids": [
+        "S-032"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-032",
+          "name": "Ashcombe Field Corner",
+          "grid_ref_km": {
+            "x": 69.4,
+            "y": 41.2
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 4.5,
+        "substation_distance_km": 1.0,
+        "owner_status": "in_talks",
+        "community_sentiment": null,
+        "flood_zone": "none",
+        "usable_area_m2": 1500
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 1.0,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 4.5
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "none",
+          "owner_type": "private",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 2.1,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 4.5,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-032:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-032:observation:0",
+            "date": "2026-09-02",
+            "author": "RS",
+            "source_site_id": "S-032"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-09-02",
+            "note_id": "S-032:0",
+            "source_site_id": "S-032",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-032:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-032",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-032:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-032:observation:0",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-032"
+        },
+        {
+          "kind": "follow_up",
+          "value": "Send heads of terms to the owner",
+          "actor": "author",
+          "scope": "heads of terms to owner after first call",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-032:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-032:observation:1",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-032"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-032:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-032:observation:0",
+          "date": "2026-09-02",
+          "author": "RS",
+          "source_site_id": "S-032"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-09-02",
+          "note_id": "S-032:0",
+          "source_site_id": "S-032",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained"
+      ]
+    },
+    {
+      "site_id": "S-034",
+      "name": "Vinstra Old Dairy",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "parcel_id": "NH-4238",
+      "grid_ref_km": {
+        "x": 30.92,
+        "y": 57.85
+      },
+      "source_site_ids": [
+        "S-034"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-034",
+          "name": "Vinstra Old Dairy",
+          "grid_ref_km": {
+            "x": 30.92,
+            "y": 57.85
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 5.1,
+        "substation_distance_km": 4.2,
+        "owner_status": "in_talks",
+        "community_sentiment": "neutral",
+        "flood_zone": "medium",
+        "usable_area_m2": 1100
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 4.2,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 5.1
+        },
+        "landreg": {
+          "area_m2": 1100,
+          "flood_zone": "medium",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 5100,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-034:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-034:observation:0",
+            "date": "2026-08-26",
+            "author": "AV",
+            "source_site_id": "S-034"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-08-26",
+            "note_id": "S-034:0",
+            "source_site_id": "S-034",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "neutral",
+            "actor": "residents",
+            "scope": "neighbours who were spoken to",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-034:1",
+            "quote": "Neighbours we spoke to were indifferent.",
+            "observation_id": "S-034:observation:2",
+            "date": "2026-08-11",
+            "author": "AV",
+            "source_site_id": "S-034"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-034:1",
+          "text": "Neighbours we spoke to were indifferent.",
+          "date": "2026-08-11",
+          "author": "AV",
+          "source_site_id": "S-034",
+          "owner_status": null
+        },
+        {
+          "note_id": "S-034:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-08-26",
+          "author": "AV",
+          "source_site_id": "S-034",
+          "owner_status": "in_talks"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "sentiment",
+          "value": "neutral",
+          "actor": "residents",
+          "scope": "neighbours who were spoken to",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-034:1",
+          "quote": "Neighbours we spoke to were indifferent.",
+          "observation_id": "S-034:observation:2",
+          "date": "2026-08-11",
+          "author": "AV",
+          "source_site_id": "S-034"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-034:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-034:observation:0",
+          "date": "2026-08-26",
+          "author": "AV",
+          "source_site_id": "S-034"
+        },
+        {
+          "kind": "follow_up",
+          "value": "send heads of terms to the owner",
+          "actor": "author",
+          "scope": "heads of terms to be sent after first call",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-034:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-034:observation:1",
+          "date": "2026-08-26",
+          "author": "AV",
+          "source_site_id": "S-034"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-034:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-034:observation:0",
+          "date": "2026-08-26",
+          "author": "AV",
+          "source_site_id": "S-034"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-08-26",
+          "note_id": "S-034:0",
+          "source_site_id": "S-034",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-037",
+      "name": "Merrow Depot",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "parcel_id": "TR-1481",
+      "grid_ref_km": {
+        "x": 61.0,
+        "y": 35.0
+      },
+      "source_site_ids": [
+        "S-037"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-037",
+          "name": "Merrow Depot",
+          "grid_ref_km": {
+            "x": 61.0,
+            "y": 35.0
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 3.7,
+        "substation_distance_km": 2.8,
+        "owner_status": "in_talks",
+        "community_sentiment": "supportive",
+        "flood_zone": "none",
+        "usable_area_m2": 900
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 2.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 3.7
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "none",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 3.7,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-037:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-037:observation:0",
+            "date": "2026-07-14",
+            "author": "RS",
+            "source_site_id": "S-037"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-07-14",
+            "note_id": "S-037:0",
+            "source_site_id": "S-037",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "supportive",
+            "actor": "councillor",
+            "scope": "ward councillor's personal position",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-037:1",
+            "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+            "observation_id": "S-037:observation:1",
+            "date": "2026-08-23",
+            "author": "RS",
+            "source_site_id": "S-037"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-037:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-07-14",
+          "author": "RS",
+          "source_site_id": "S-037",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-037:1",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-037",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-037:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-037:observation:0",
+          "date": "2026-07-14",
+          "author": "RS",
+          "source_site_id": "S-037"
+        },
+        {
+          "kind": "sentiment",
+          "value": "supportive",
+          "actor": "councillor",
+          "scope": "ward councillor's personal position",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-037:1",
+          "quote": "Met the ward councillor; she is openly in favour and offered to speak at the hearing.",
+          "observation_id": "S-037:observation:1",
+          "date": "2026-08-23",
+          "author": "RS",
+          "source_site_id": "S-037"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-037:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-037:observation:0",
+          "date": "2026-07-14",
+          "author": "RS",
+          "source_site_id": "S-037"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-07-14",
+          "note_id": "S-037:0",
+          "source_site_id": "S-037",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "parcel_area_used_as_usable_area_proxy"
+      ]
+    },
+    {
+      "site_id": "S-039",
+      "name": "Oddan Car Park",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "parcel_id": "NH-4273",
+      "grid_ref_km": {
+        "x": 29.55,
+        "y": 60.75
+      },
+      "source_site_ids": [
+        "S-039"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-039",
+          "name": "Oddan Car Park",
+          "grid_ref_km": {
+            "x": 29.55,
+            "y": 60.75
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.3,
+        "substation_distance_km": 0.9,
+        "owner_status": "not_contacted",
+        "community_sentiment": null,
+        "flood_zone": "low",
+        "usable_area_m2": 900
+      },
+      "score_inputs_complete": false,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.3
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1300,
+          "raw_unit": "kW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "not_contacted",
+            "actor": "landowner",
+            "scope": "owner contact status for the site",
+            "statement_status": "asserted",
+            "evidence_basis": "unspecified",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-039:0",
+            "quote": "Owner not contacted yet.",
+            "observation_id": "S-039:observation:0",
+            "date": "2026-08-13",
+            "author": "AV",
+            "source_site_id": "S-039"
+          },
+          {
+            "kind": "owner_status",
+            "value": "not_contacted",
+            "date": "2026-08-13",
+            "note_id": "S-039:0",
+            "source_site_id": "S-039",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-039:0",
+          "text": "Owner not contacted yet.",
+          "date": "2026-08-13",
+          "author": "AV",
+          "source_site_id": "S-039",
+          "owner_status": "not_contacted"
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "actor": "landowner",
+          "scope": "owner contact status for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-039:0",
+          "quote": "Owner not contacted yet.",
+          "observation_id": "S-039:observation:0",
+          "date": "2026-08-13",
+          "author": "AV",
+          "source_site_id": "S-039"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "actor": "landowner",
+          "scope": "owner contact status for the site",
+          "statement_status": "asserted",
+          "evidence_basis": "unspecified",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-039:0",
+          "quote": "Owner not contacted yet.",
+          "observation_id": "S-039:observation:0",
+          "date": "2026-08-13",
+          "author": "AV",
+          "source_site_id": "S-039"
+        },
+        {
+          "kind": "owner_status",
+          "value": "not_contacted",
+          "date": "2026-08-13",
+          "note_id": "S-039:0",
+          "source_site_id": "S-039",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "unknown_or_conditional_sentiment",
+        "parcel_area_used_as_usable_area_proxy",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    },
+    {
+      "site_id": "S-040",
+      "name": "Otterley Works",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "parcel_id": "SV-1520",
+      "grid_ref_km": {
+        "x": 39.0,
+        "y": 36.9
+      },
+      "source_site_ids": [
+        "S-040"
+      ],
+      "aliases": [
+        {
+          "site_id": "S-040",
+          "name": "Otterley Works",
+          "grid_ref_km": {
+            "x": 39.0,
+            "y": 36.9
+          }
+        }
+      ],
+      "scoring_inputs": {
+        "headroom_mw": 1.9,
+        "substation_distance_km": 3.4,
+        "owner_status": "in_talks",
+        "community_sentiment": "opposed",
+        "flood_zone": "low",
+        "usable_area_m2": 1500
+      },
+      "score_inputs_complete": true,
+      "normalized_sources": {
+        "gridmap": {
+          "substation_distance_km": 3.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z",
+          "headroom_mw": 1.9
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.7,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "input_evidence": {
+        "headroom_mw": {
+          "source": "gridmap",
+          "raw_value": 1.9,
+          "raw_unit": "MW",
+          "data_as_of": "2026-06-30"
+        },
+        "substation_distance_km": {
+          "source": "gridmap",
+          "status": "available",
+          "lower_bound_km_exclusive": null
+        },
+        "owner_status": [
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "actor": "landowner",
+            "scope": "landowner lease negotiations",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": null,
+            "note_id": "S-040:0",
+            "quote": "Good first call with the owner, sending heads of terms.",
+            "observation_id": "S-040:observation:0",
+            "date": "2026-07-08",
+            "author": "MA",
+            "source_site_id": "S-040"
+          },
+          {
+            "kind": "owner_status",
+            "value": "in_talks",
+            "date": "2026-07-08",
+            "note_id": "S-040:0",
+            "source_site_id": "S-040",
+            "source": "structured_note",
+            "statement_status": "asserted",
+            "quote": null
+          }
+        ],
+        "community_sentiment": [
+          {
+            "kind": "sentiment",
+            "value": "opposed",
+            "actor": "councillor",
+            "scope": "single councillor raising fire-safety objections at a meeting",
+            "statement_status": "asserted",
+            "evidence_basis": "reported_conversation",
+            "quantity": null,
+            "event_time_text": "last month's meeting",
+            "note_id": "S-040:1",
+            "quote": "Councillor raised fire-safety objections at last month's meeting",
+            "observation_id": "S-040:observation:1",
+            "date": "2026-08-27",
+            "author": "MA",
+            "source_site_id": "S-040"
+          }
+        ],
+        "flood_zone": {
+          "source": "landreg",
+          "record_date": "2025-11-03"
+        },
+        "usable_area_m2": {
+          "source": "landreg",
+          "basis": "parcel_area_proxy",
+          "record_date": "2025-11-03",
+          "field_note_area_observations": []
+        }
+      },
+      "field_notes": [
+        {
+          "note_id": "S-040:0",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "date": "2026-07-08",
+          "author": "MA",
+          "source_site_id": "S-040",
+          "owner_status": "in_talks"
+        },
+        {
+          "note_id": "S-040:1",
+          "text": "Councillor raised fire-safety objections at last month's meeting; expect a fight.",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-040",
+          "owner_status": null
+        }
+      ],
+      "observations": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-040:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-040:observation:0",
+          "date": "2026-07-08",
+          "author": "MA",
+          "source_site_id": "S-040"
+        },
+        {
+          "kind": "sentiment",
+          "value": "opposed",
+          "actor": "councillor",
+          "scope": "single councillor raising fire-safety objections at a meeting",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": "last month's meeting",
+          "note_id": "S-040:1",
+          "quote": "Councillor raised fire-safety objections at last month's meeting",
+          "observation_id": "S-040:observation:1",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-040"
+        },
+        {
+          "kind": "site_condition",
+          "value": "fire-safety concern raised by councillor",
+          "actor": "councillor",
+          "scope": "fire-safety objection to the site",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": "last month's meeting",
+          "note_id": "S-040:1",
+          "quote": "Councillor raised fire-safety objections at last month's meeting",
+          "observation_id": "S-040:observation:2",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-040"
+        },
+        {
+          "kind": "follow_up",
+          "value": "author expects opposition to be contested",
+          "actor": "author",
+          "scope": "author's expectation of a fight over the proposal",
+          "statement_status": "asserted",
+          "evidence_basis": "author_assessment",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-040:1",
+          "quote": "expect a fight",
+          "observation_id": "S-040:observation:3",
+          "date": "2026-08-27",
+          "author": "MA",
+          "source_site_id": "S-040"
+        }
+      ],
+      "owner_status_history": [
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "actor": "landowner",
+          "scope": "landowner lease negotiations",
+          "statement_status": "asserted",
+          "evidence_basis": "reported_conversation",
+          "quantity": null,
+          "event_time_text": null,
+          "note_id": "S-040:0",
+          "quote": "Good first call with the owner, sending heads of terms.",
+          "observation_id": "S-040:observation:0",
+          "date": "2026-07-08",
+          "author": "MA",
+          "source_site_id": "S-040"
+        },
+        {
+          "kind": "owner_status",
+          "value": "in_talks",
+          "date": "2026-07-08",
+          "note_id": "S-040:0",
+          "source_site_id": "S-040",
+          "source": "structured_note",
+          "statement_status": "asserted",
+          "quote": null
+        }
+      ],
+      "flags": [
+        "explicit_opposition",
+        "parcel_area_used_as_usable_area_proxy",
+        "vendor_differs_from_official_grid; official_retained",
+        "confirmed_headroom_below_2_mw_reference"
+      ]
+    }
+  ]
+}
