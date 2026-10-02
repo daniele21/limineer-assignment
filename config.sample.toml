@@ -1,0 +1,22 @@
+# One synthetic site: one real API call, independent of the assignment data.
+[model]
+name = "claude-opus"
+version = "5"
+
+[prompt]
+name = "field_notes"
+version = "v1"
+system_file = "prompts/field_notes/v1/system.md"
+user_file = "prompts/field_notes/v1/user.md"
+
+[input]
+sites_file = "tests/fixtures/artificial_sites.json"
+site_ids = []
+
+[output]
+path = "output/artificial_sample.json"
+
+[api]
+max_tokens = 8192
+timeout_seconds = 120.0
+max_retries = 0 # A diagnostic request should fail promptly.

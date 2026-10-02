@@ -1,0 +1,10 @@
+{
+  "required_observations": [
+    {"kind": "owner_status", "value": "loi_signed", "actor": "landowner", "note_id": "ART-001:0"},
+    {"kind": "owner_status", "value": "in_talks", "actor": "landowner", "note_id": "ART-001:1"},
+    {"kind": "sentiment", "value": "neutral", "actor": "residents", "note_id": "ART-001:2"},
+    {"kind": "available_area", "value": "remaining_plot", "note_id": "ART-001:2", "quantity": {"value": 700, "unit": "m2", "precision": "approximate"}},
+    {"kind": "commercial_term", "actor": "landowner", "note_id": "ART-001:0", "quantity": {"value": 12, "unit": "percent"}}
+  ],
+  "forbidden_kinds": ["grid_headroom", "substation_distance"]
+}

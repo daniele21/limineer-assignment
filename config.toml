@@ -1,0 +1,22 @@
+# Paths are relative to this config file. Credentials stay in .env.
+[model]
+name = "claude-opus"
+version = "5"
+
+[prompt]
+name = "field_notes"
+version = "v1"
+system_file = "prompts/field_notes/v1/system.md"
+user_file = "prompts/field_notes/v1/user.md"
+
+[input]
+sites_file = "data/sites.json"
+site_ids = [] # Empty means all sites.
+
+[output]
+path = "output/extractions.json"
+
+[api]
+max_tokens = 8192
+timeout_seconds = 120.0
+max_retries = 2
