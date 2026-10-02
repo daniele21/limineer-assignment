@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Five Sites by Thursday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #f5ecd4;
+    --surface: #efe2c4;
+    --surface-2: #eddcbf;
+    --text: #1e1208;
+    --muted: #4a3420;
+    --soft: #6b5438;
+    --line: #d8ccaa;
+    --amber: #7a4e12;
+    --amber-id: #c07828;
+    --teal: #007a94;
+    --teal-tint: #b0dce8;
+    --quote-bg: #f9f2df;
+    --code-bg: #efe2c4;
+    --gradient: linear-gradient(90deg, #2d1810, #6b3a1a 20%, #c07828 45%, #0095b4, #d4a048 85%, #e8d060 100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #190f0b; --surface: #231006; --surface-2: #2e2019;
+      --text: #f5ecd4; --muted: #d8ccaa; --soft: #b8a88a; --line: #3d2818;
+      --amber: #d4a048; --amber-id: #d68529; --teal: #28b0d0; --teal-tint: #0f3a46;
+      --quote-bg: #231006; --code-bg: #2e2019;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #190f0b; --surface: #231006; --surface-2: #2e2019;
+    --text: #f5ecd4; --muted: #d8ccaa; --soft: #b8a88a; --line: #3d2818;
+    --amber: #d4a048; --amber-id: #d68529; --teal: #28b0d0; --teal-tint: #0f3a46;
+    --quote-bg: #231006; --code-bg: #2e2019;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.62 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding-inline: 20px;
+    padding-block: 0 72px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .bar { height: 4px; background: var(--gradient); margin-inline: -20px; }
+
+  h1, h2, h3, .eyebrow, .wordmark, th, .chip, .part-meta {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+  .wordmark { font-weight: 700; letter-spacing: -0.01em; font-size: 15px; }
+  header.top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding-block: 22px 0; color: var(--muted); }
+  header.top .role { font-size: 13px; color: var(--soft); }
+
+  .hero { padding-block: 56px 28px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin: 0 0 14px; }
+  h1 { font-size: clamp(38px, 7vw, 60px); line-height: 1.02; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 20px; text-wrap: balance; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 60ch; margin: 0; }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-block: 32px 8px; }
+  .facts div { background: var(--surface); padding: 14px 16px; }
+  .facts dt { font: 600 11px/1.3 "DM Sans", sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft); margin-bottom: 4px; }
+  .facts dd { margin: 0; font-weight: 600; font-size: 15px; }
+
+  section { padding-block: 44px 0; }
+  h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 16px; text-wrap: balance; }
+  h3 { font-size: 18px; font-weight: 600; margin: 0 0 8px; }
+  p, li { max-width: 66ch; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+  hr.grad { border: 0; height: 2px; background: var(--gradient); opacity: .55; margin: 56px 0 0; }
+
+  .msg { background: var(--quote-bg); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px 14px; margin: 0 0 16px; }
+  .msg .who { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font: 600 14px "DM Sans", sans-serif; }
+  .msg .avatar { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 700; color: #f5ecd4; background: var(--amber-id); }
+  .msg .avatar.j { background: var(--teal); }
+  .msg .ctx { font-weight: 400; color: var(--soft); font-size: 13px; }
+  .msg p { margin: 0; font-size: 16px; }
+
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft); background: var(--surface); }
+  tr:last-child td { border-bottom: 0; }
+  td.num, .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-variant-numeric: tabular-nums; }
+  td.num { font-size: 13.5px; }
+  .formula { background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 14.5px; }
+  .kill { border-left: 3px solid #b3261e; padding: 4px 0 4px 14px; margin-top: 14px; }
+
+  .parts { display: grid; gap: 14px; }
+  .part { border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 8px; background: var(--bg); }
+  .part-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .part-meta { font-size: 13px; color: var(--teal); font-weight: 600; white-space: nowrap; }
+  .part h3 { margin: 0; }
+  .part .step { color: var(--amber); font-weight: 700; margin-right: 6px; }
+  code { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: .88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 0 0 18px; }
+  .file { display: block; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: inherit; background: var(--surface); }
+  .file:hover, .file:focus-visible { border-color: var(--teal); outline: none; }
+  .file .name { font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--teal); font-size: 14px; }
+  .file .desc { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+
+  details { border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; background: var(--bg); }
+  summary { cursor: pointer; padding: 12px 16px; font: 600 15px "DM Sans", sans-serif; }
+  summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 10px; }
+  details .inner { padding: 0 16px 8px; }
+  pre { background: var(--code-bg); border-radius: 8px; padding: 14px; overflow-x: auto; font: 12.5px/1.55 "IBM Plex Mono", ui-monospace, monospace; margin: 0 0 14px; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding-left: 26px; position: relative; }
+  .checklist li::before { content: ""; position: absolute; left: 2px; top: 7px; width: 12px; height: 12px; border: 1.5px solid var(--amber-id); border-radius: 3px; }
+
+  .signoff { color: var(--muted); margin-top: 28px; }
+  .primer { background: var(--surface); border-radius: 12px; padding: 20px 20px 6px; margin: 22px 0 28px; }
+  .primer h3 { margin-bottom: 4px; }
+  .primer-sub { color: var(--muted); font-size: 15px; }
+  .gloss { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px 24px; margin: 0 0 14px; }
+  .gloss dt { font: 600 15px "DM Sans", sans-serif; color: var(--amber); margin-bottom: 2px; }
+  .gloss dd { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.55; }
+  .cast-h { margin-top: 8px; margin-bottom: 12px; }
+  .short { border: 1.5px solid var(--amber-id); border-radius: 12px; padding: 16px 20px 6px; margin-top: 18px; }
+  .short-h { font: 600 12px "DM Sans", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin: 0 0 6px; }
+  .short ol { margin: 0 0 12px; padding-left: 22px; }
+  .rules { background: var(--surface); border-radius: 10px; padding: 14px 18px 4px; margin: 0 0 14px; }
+  .rules-h { font: 600 12px "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin: 0 0 6px; }
+  .keybox .h2-sub { margin-top: 36px; }
+  a { color: var(--teal); }
+  a:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+  .sticky { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); margin-inline: -20px; padding-inline: 20px; border-bottom: 1px solid var(--line); }
+  .sticky-in { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+  .tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs a { display: flex; align-items: center; gap: 7px; white-space: nowrap; padding: 14px 10px 12px; text-decoration: none; color: var(--soft); font: 600 14px "DM Sans", sans-serif; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tabs a:hover { color: var(--text); }
+  .tabs a[aria-current="page"] { color: var(--text); border-bottom-color: var(--amber-id); }
+  .tabs .n { display: inline-grid; place-items: center; width: 19px; height: 19px; border-radius: 50%; font-size: 11px; background: var(--surface); color: var(--soft); }
+  .tabs a[aria-current="page"] .n { background: var(--amber-id); color: #fff8e8; }
+  .sticky .wordmark { flex: none; }
+  .page { padding-block: 36px 0; }
+  .page .hero { padding-block: 16px 20px; }
+  .ov { padding-top: 24px; }
+  .lead-sm { color: var(--muted); font-size: 17px; }
+  .h2-sub { margin-top: 40px; }
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .pg { font: 600 15px "DM Sans", sans-serif; text-decoration: none; padding: 10px 14px; border-radius: 8px; }
+  .pg.next { background: var(--teal); color: #fff; margin-left: auto; }
+  .pg.prev { color: var(--soft); }
+  .pg:hover { filter: brightness(1.08); }
+  .role-line { color: var(--soft); font-size: 13px; margin: 0 0 6px; font-family: "DM Sans", sans-serif; }
+  @media (max-width: 560px) { .sticky .wordmark { display: none; } }
+  @media (prefers-reduced-motion: no-preference) { .page:not([hidden]) { animation: fade .18s ease-out; } @keyframes fade { from { opacity: .4; } to { opacity: 1; } } }
+</style>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<div class="sticky"><div class="sticky-in"><span class="wordmark">Limineer</span><nav class="tabs" aria-label="Sections"><a href="#overview" data-tab="overview"><span class="n">1</span>Overview</a><a href="#primer" data-tab="primer"><span class="n">2</span>Primer</a><a href="#rubric" data-tab="rubric"><span class="n">3</span>Rubric</a><a href="#data" data-tab="data"><span class="n">4</span>Data</a><a href="#task" data-tab="task"><span class="n">5</span>Your task</a><a href="#submit" data-tab="submit"><span class="n">6</span>Submit</a></nav></div></div>
+<div class="wrap">
+  <section class="page" id="overview" aria-label="Overview">
+  <div class="hero">
+    <p class="eyebrow">Take-home · Venture Engineer (Forward Deployed)</p>
+    <h1>Five sites by&nbsp;Thursday</h1>
+    <p class="lede">Thanks for giving this half a day. The situation is invented, but it's built from a pattern we hit again and again across our ventures. Treat it as your first week on a real one.</p>
+    <dl class="facts">
+      <div><dt>Time</dt><dd>3–4 hours, max 4</dd></div>
+      <div><dt>Stack</dt><dd>Any language + Claude API</dd></div>
+      <div><dt>AI tools</dt><dd>Yes, with transcripts</dd></div>
+      <div><dt>Ship</dt><dd>Code + a public page</dd></div>
+    </dl>
+    <div class="short">
+      <p class="short-h">In short</p>
+      <p>Our venture lead needs <strong>5 sites for community batteries</strong> to show a sponsor on Thursday. You get the data our team collected on <strong>40 candidate sites</strong>. You:</p>
+      <ol>
+        <li>write down what you'd want to know before building, and what you'll assume instead;</li>
+        <li>build a small tool that uses Claude to read the team's notes, then scores and ranks the sites, and shows why;</li>
+        <li>publish one page she can read on her phone: which sites to bring, how sure we are, and what to check next.</li>
+      </ol>
+    </div>
+  </div>
+
+
+    <div class="ov">
+    <h2>The situation</h2>
+    <p>It's <strong>Tuesday afternoon</strong>. On <strong>Thursday at 9:00</strong>, Maren (our venture lead) meets our first corporate sponsor. She wants to walk in with <strong>five shortlisted sites</strong> and a reason for each.</p>
+    <p>The venture finds small plots of land where a <strong>community battery</strong> could be built (see the <a href="#primer">primer</a>). We're in the validation stage, trying to prove one belief: <em>good sites can be found from public data plus a bit of legwork, faster than incumbents who do it by hand.</em> The sponsor is a large energy company that may fund the next step. If they like a site, they pay for a proper feasibility study on it. Picking the wrong site costs the sponsor money and costs us credibility.</p>
+    <p>Over the summer, our four-person business development team gathered 40 candidate sites. For each one we pulled data from three sources and added their field notes. The country is fictional (the Republic of Vessmark), and so is everything else in the data.</p>
+
+    <h3 class="cast-h">Who's who</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Person</th><th>Role</th><th>Reachable before Thursday?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>You</strong></td><td>Venture engineer, first week on this venture</td><td>Yes</td></tr>
+          <tr><td><strong>Maren</strong></td><td>Venture lead. Owns the sponsor relationship and presents on Thursday. Smart, not technical.</td><td>No: in workshops, reads messages Thursday morning</td></tr>
+          <tr><td><strong>Jonas</strong></td><td>Engineer who set up the data pull. Suggested the plan below.</td><td>No: on holiday</td></tr>
+          <tr><td><strong>Business development team</strong><br><span class="mono">MA · JK · RS · AV</span></td><td>Visited sites, talked to owners and councils, wrote the field notes</td><td>No: all at the same workshop</td></tr>
+          <tr><td><strong>The sponsor</strong></td><td>Energy company that may fund feasibility studies on the shortlisted sites</td><td>Thursday only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="cast-h">The two messages you got</h3>
+    <div class="msg">
+      <div class="who"><span class="avatar" aria-hidden="true">M</span>Maren <span class="ctx">· venture lead · to you</span></div>
+      <p>"Can you give me one score per site, highest first, and the top five? Keep it simple, the sponsor isn't technical. I'm in workshops until Thursday morning, so just use your judgement."</p>
+    </div>
+    <div class="msg">
+      <div class="who"><span class="avatar j" aria-hidden="true">J</span>Jonas <span class="ctx">· engineer · in the channel, before going on holiday</span></div>
+      <p>"Easy one. Load sites.json. For each criterion take whatever value the sources have (use the vendor estimate if gridmap is empty). Fill any remaining gaps with the dataset average so every site gets a score. Weighted sum, sort descending, send Maren the top five. Should take an hour."</p>
+    </div>
+      </div>
+    <nav class="pager" aria-label="Page navigation"><span></span><a class="pg next" href="#primer">Next: Primer →</a></nav>
+  </section>
+  <section class="page" id="primer" aria-label="Primer">
+    <h2>New to energy? A 60-second primer</h2>
+    <p class="lead-sm">You don't need any energy background for this. This is everything you need.</p>
+    <div class="primer">
+      
+      
+      <dl class="gloss">
+        <div><dt>Community battery</dt><dd>A shipping-container-sized battery (1–5 MW) placed in a neighbourhood. It charges when power is cheap or plentiful (sunny, windy, night) and discharges when it's scarce, which keeps the local grid stable. It needs a small plot of land and a cable to the grid.</dd></div>
+        <div><dt>Substation</dt><dd>The local node of the electricity grid, where a battery would connect. Every site has a "nearest substation".</dd></div>
+        <div><dt>Grid headroom</dt><dd>How much spare capacity that substation has for new connections. If headroom is lower than the battery's size, the battery can't connect without expensive upgrades. It's the single most important criterion.</dd></div>
+        <div><dt>Distance to substation</dt><dd>The cable has to run from the plot to the substation, so further means costlier and slower.</dd></div>
+        <div><dt>MW and kW</dt><dd>Megawatt and kilowatt, units of power: 1 MW = 1,000 kW.</dd></div>
+        <div><dt>Grid operators</dt><dd>Each region's grid is run by a regional operator. They publish headroom figures, which a national open-data feed collects.</dd></div>
+        <div><dt>LOI (letter of intent)</dt><dd>A non-binding signed note from the landowner saying they'd lease the plot. "In talks" means they're negotiating ("heads of terms" is the draft deal). "Refused" means they said no.</dd></div>
+        <div><dt>Flood zone</dt><dd>Official flood-risk category for the plot. Batteries and floods don't mix.</dd></div>
+        <div><dt>Protected nature area</dt><dd>A legally designated reserve. You can't build there, full stop.</dd></div>
+      </dl>
+    </div>
+
+    <nav class="pager" aria-label="Page navigation"><a class="pg prev" href="#overview">← Overview</a><a class="pg next" href="#rubric">Next: Rubric →</a></nav>
+  </section>
+  <section class="page" id="rubric" aria-label="Rubric">
+
+    <h2>The scoring rubric we agreed with the sponsor</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>#</th><th>Criterion</th><th>Weight</th><th>Tiers (score 0–5)</th></tr></thead>
+        <tbody>
+          <tr><td class="num">C1</td><td>Grid headroom at nearest substation</td><td class="num">30</td><td class="num">≥ 4 MW → 5 · 2–4 → 3 · 1–2 → 1 · &lt; 1 → 0</td></tr>
+          <tr><td class="num">C2</td><td>Distance to that substation</td><td class="num">15</td><td class="num">≤ 1 km → 5 · ≤ 3 → 3 · ≤ 6 → 1 · &gt; 6 → 0</td></tr>
+          <tr><td class="num">C3</td><td>Landowner status</td><td class="num">20</td><td>LOI signed → 5 · in talks → 3 · not contacted → 1 · refused → 0</td></tr>
+          <tr><td class="num">C4</td><td>Local council / community sentiment</td><td class="num">10</td><td>supportive → 5 · neutral → 3 · opposed → 0</td></tr>
+          <tr><td class="num">C5</td><td>Flood zone</td><td class="num">15</td><td>none → 5 · low → 4 · medium → 2 · high → 0</td></tr>
+          <tr><td class="num">C6</td><td>Usable area (a 2 MW system needs ~1,200 m²)</td><td class="num">10</td><td class="num">≥ 1,200 m² → 5 · 800–1,200 → 2 · &lt; 800 → 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="formula"><strong>Site score</strong> = Σ (weight × tier ÷ 5), which runs from <span class="mono">0</span> to <span class="mono">100</span>.</p>
+    <p class="kill"><strong>Kill rule:</strong> sites inside a protected nature area are excluded, whatever their score.</p>
+      <nav class="pager" aria-label="Page navigation"><a class="pg prev" href="#primer">← Primer</a><a class="pg next" href="#data">Next: Data →</a></nav>
+  </section>
+  <section class="page" id="data" aria-label="Data">
+
+    <h2>The data</h2>
+    <p>Everything is synthetic. Open the files directly:</p>
+    <div class="files">
+      <a class="file" href="data/sites.json" target="_blank" rel="noopener"><div class="name">sites.json</div><div class="desc">40 candidate sites, 3 sources each, plus field notes. Exported 2026-09-21.</div></a>
+      <a class="file" href="data/fetch_log.csv" target="_blank" rel="noopener"><div class="name">fetch_log.csv</div><div class="desc">The log from the job that pulled the source data.</div></a>
+      <a class="file" href="data/DATA_DICTIONARY.md" target="_blank" rel="noopener"><div class="name">DATA_DICTIONARY.md</div><div class="desc">What every field means, and known quirks.</div></a>
+    </div>
+
+    <details>
+      <summary>Data dictionary</summary>
+      <div class="inner">
+        <h3>Each site</h3>
+        <div class="table-scroll"><table>
+          <thead><tr><th>Field</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="num">site_id</td><td>Tracker ID (<code>S-001</code>…). Created by whoever first logged the site.</td></tr>
+            <tr><td class="num">name</td><td>Human name as entered by the business development team.</td></tr>
+            <tr><td class="num">region</td><td>Aldmark, Nordholm, Sveld or Tarrow.</td></tr>
+            <tr><td class="num">site_type</td><td>brownfield, depot_yard, municipal_land, farm_edge.</td></tr>
+            <tr><td class="num">grid_ref_km</td><td>Position on the national km grid (x east, y north).</td></tr>
+            <tr><td class="num">parcel_id</td><td>Land registry parcel identifier.</td></tr>
+            <tr><td class="num">sources</td><td>Data from the three sources below. A source is <code>null</code> if it returned nothing.</td></tr>
+            <tr><td class="num">field_notes</td><td>Free-text notes from the business development team.</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3>gridmap: national grid open-data feed</h3>
+        <p><code>headroom</code> (available capacity at the nearest substation) · <code>substation_distance_km</code> (straight-line) · <code>data_as_of</code> (operator's last update, quarterly) · <code>fetched_at</code> (when our job pulled it). It aggregates the regional operators' publications. It's the official figure and the one the sponsor will trust.</p>
+
+        <h3>landreg: land registry</h3>
+        <p><code>area_m2</code> · <code>flood_zone</code> (none / low / medium / high) · <code>protected_area</code> · <code>owner_type</code> (municipal / private) · <code>record_date</code> (last update; some records are old).</p>
+
+        <h3>vendor_estimate: third-party data vendor, trial licence</h3>
+        <p><code>headroom_mw_est</code> (modelled estimate, MW) · <code>band_pct</code> (stated uncertainty, ± %) · <code>estimated_at</code>. It's a machine-learning estimate from load profiles, not an official figure. Only some sites have one, and we haven't validated it.</p>
+
+        <h3>field_notes</h3>
+        <p>A list of notes, each with a <code>date</code>, <code>author</code> initials and <code>text</code>. Some also have a structured <code>owner_status</code> (<code>loi_signed</code>, <code>in_talks</code>, <code>not_contacted</code>, <code>refused</code>). Community sentiment is only ever in the free text. Notes were appended by hand, sometimes from memory, sometimes later.</p>
+
+        <h3>fetch_log.csv</h3>
+        <p>One row per source per site: <code>timestamp, site_id, source, http_status, message</code>.</p>
+
+        <h3>Known quirks</h3>
+        <ul>
+          <li>Headroom figures come through as the regional operators publish them. Aldmark, Sveld and Tarrow publish in MW. Nordholm publishes in kW, and the national feed doesn't convert.</li>
+          <li>The land registry doesn't have every parcel.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>What one site record looks like</summary>
+      <div class="inner">
+<pre>{
+  "site_id": "S-001",
+  "name": "Brisk Lane Yard",
+  "region": "Aldmark",
+  "site_type": "brownfield",
+  "grid_ref_km": { "x": 50.3, "y": 36.1 },
+  "parcel_id": "AL-1013",
+  "sources": {
+    "gridmap": {
+      "headroom": 2.3,
+      "substation_distance_km": 4.1,
+      "data_as_of": "2026-06-30",
+      "fetched_at": "2026-09-02T09:12:00Z"
+    },
+    "landreg": {
+      "area_m2": 1300, "flood_zone": "none", "protected_area": false,
+      "owner_type": "municipal", "record_date": "2025-11-03"
+    },
+    "vendor_estimate": {
+      "headroom_mw_est": 2.0, "band_pct": 40, "estimated_at": "2026-09-15"
+    }
+  },
+  "field_notes": [
+    { "date": "2026-09-17", "author": "JK",
+      "text": "Good first call with the owner, sending heads of terms.",
+      "owner_status": "in_talks" },
+    { "date": "2026-08-26", "author": "JK",
+      "text": "Local energy co-op wrote to the council backing the project." }
+  ]
+}</pre>
+      </div>
+    </details>
+      <nav class="pager" aria-label="Page navigation"><a class="pg prev" href="#rubric">← Rubric</a><a class="pg next" href="#task">Next: Your task →</a></nav>
+  </section>
+  <section class="page" id="task" aria-label="Your task">
+
+    <h2>What we'd like from you</h2>
+    <p>Roughly 3–4 hours in total. Please don't go past 4. We mean it: stopping and telling us what you'd do next is a skill we're hiring for.</p>
+
+    <div class="parts">
+      <article class="part">
+        <div class="part-head"><h3><span class="step">Part 1</span>Before you build</h3><span class="part-meta">~30 min</span></div>
+        <p>Read the brief and the data, then create <code>QUESTIONS.md</code> in your repo and <strong>commit it (git) before you write any scoring code</strong>. We'll look at the commit order. In it:</p>
+        <ul>
+          <li>The questions you'd ask Maren (and Jonas, and the business development team) before building this.</li>
+          <li>What you think of Jonas's plan: what's right about it, and what worries you.</li>
+          <li>Since nobody's reachable until Thursday, the <strong>assumption you're going ahead with</strong> for each open question.</li>
+        </ul>
+        <p>Nobody will answer these questions; that's the point. We want to see what you'd want to know, and how you move forward without it. Keep it short: ten sharp questions beat forty generic ones.</p>
+      </article>
+
+      <article class="part">
+        <div class="part-head"><h3><span class="step">Part 2</span>A working slice, with Claude in the loop</h3><span class="part-meta">~2 h</span></div>
+        <p>Something we can run with one command, in any language you like. It should:</p>
+        <ul>
+          <li>load the data and produce a ranked result Maren could use on Thursday;</li>
+          <li>make it possible to see <strong>why</strong> any site scored the way it did;</li>
+          <li><strong>use Claude to read the field notes.</strong> The business development team's notes are free text, and some of what the rubric needs only lives there. Call the Anthropic API from your script to turn each site's notes into structured signals: at least owner status, community sentiment, and anything in the notes that should change how the site is scored.</li>
+        </ul>
+        <div class="rules">
+          <p class="rules-h">Rules for the Claude step</p>
+          <ul>
+            <li><strong>Every extracted signal carries the exact quote it came from.</strong> If the notes don't say, the answer is "unknown". Don't let the model guess.</li>
+            <li><strong>Check it.</strong> Show us how you know the extraction is right. Hand-checking a sample of sites against the model's output and reporting what you found is plenty.</li>
+            <li><strong>Claude reads the notes; your code decides the scores.</strong> Keep the rubric in your code, not in a prompt.</li>
+            <li>Keep your prompt(s) in the repo. Use any current Claude model; <code>claude-opus-5</code> is a good default.</li>
+          </ul>
+        </div>
+        <p>You don't need an agent framework. One well-designed call per site (or per batch) is enough, and choosing the simplest thing that works is part of the test.</p>
+        <p>Add a short <code>README.md</code> explaining how to run it and what decisions you made.</p>
+      </article>
+
+      <article class="part">
+        <div class="part-head"><h3><span class="step">Part 3</span>The page Maren opens on Thursday</h3><span class="part-meta">~1 h</span></div>
+        <p>Maren will open one link on her phone on Thursday morning, just before she walks in. Build that page:</p>
+        <ul>
+          <li><strong>One page, publicly viewable, at a URL we can open.</strong> Vercel, Netlify, GitHub Pages, Cloudflare Pages or anything else free is fine. A static page generated from your script's output is perfectly good. No login, no backend needed.</li>
+          <li>It carries your <strong>recommendation for Thursday</strong>: what you'd put in front of the sponsor, what you're confident about, what you aren't, and what you'd do next.</li>
+          <li>It lets Maren (or us) <strong>see why</strong> each shortlisted site is there, and why the obvious-looking ones aren't.</li>
+          <li>It works on a phone.</li>
+        </ul>
+        <p>Also put the written part in <code>NOTE.md</code> (one page at most), so we can read it without the page. Maren is smart, not technical and busy, so write for her, not for us.</p>
+        <p>This isn't a design test, and one clean page beats a dashboard. We care whether the page helps Maren make a good call in the five minutes she has.</p>
+      </article>
+    </div>
+
+
+  <div class="sub keybox">
+    <h2 class="h2-sub">Your Anthropic API key</h2>
+    <p>We'll email you a personal API key for this task, with a small spending cap. It stops working a week after we send it, and you won't come close to the cap. Please:</p>
+    <ul>
+      <li>keep it out of your repo (use an environment variable, e.g. <code>ANTHROPIC_API_KEY</code>);</li>
+      <li><strong>never put it in the page.</strong> Call Claude from your script and publish static output. Your public page must not talk to the API.</li>
+    </ul>
+    <p>If you hit a problem with the key, tell us. It won't count against you.</p>
+  </div>
+  <div class="sub" id="ai-block">
+    <h2 class="h2-sub">On AI tools</h2>
+    <p>Use them. We do, every day. We only ask that you:</p>
+    <ul>
+      <li><strong>Include your AI conversation(s)</strong>, exported unedited, in <code>ai-transcripts/</code>. Any format works: a share link or export from Claude or ChatGPT, a Cursor or Claude Code session export, or a plain copy-paste into a <code>.md</code> file. We're not grading your prompts' style. We want to see how you work: what context you gave, where you pushed back, and when you decided something was good enough.</li>
+      <li>Add <code>AI_LOG.md</code> with 3–5 bullets on moments where you <strong>disagreed with or corrected</strong> the AI, and why. For example: <em>"It proposed a SQLite database; I kept a single JSON-in, HTML-out script because 40 records don't need one and Maren's page must be generated from the same code."</em></li>
+    </ul>
+    <p>If you didn't use AI, say so. That's fine too.</p>
+  </div>
+  <div class="sub">
+    <h2 class="h2-sub">What we don't care about</h2>
+    <p>Production polish, full test coverage, a polished UI, CI/CD, or reproducing the rubric in a fancy framework. We'd rather see a small thing you trust than a big thing you don't.</p>
+  </div>
+    <nav class="pager" aria-label="Page navigation"><a class="pg prev" href="#data">← Data</a><a class="pg next" href="#submit">Next: Submit →</a></nav>
+  </section>
+  <section class="page" id="submit" aria-label="Submit">
+
+    <h2>Submitting</h2>
+    <ul class="checklist">
+      <li>The <strong>public URL</strong> of your page (please keep it up for two weeks)</li>
+      <li>A git repo (zip or private link), with your commit history kept</li>
+      <li><code>QUESTIONS.md</code>, your code and <code>README.md</code></li>
+      <li>Your Claude prompt(s) and the extraction check (the key stays out of the repo)</li>
+      <li><code>NOTE.md</code></li>
+      <li><code>ai-transcripts/</code>: your AI chats, exported unedited (any format)</li>
+      <li><code>AI_LOG.md</code>: 3–5 bullets on where you disagreed with or corrected the AI, and why</li>
+      <li>A line in the README with roughly how long you spent</li>
+    </ul>
+    <p>We'll follow up with a 30-minute call. For part of it, one of us will play Maren on Thursday morning with your page open on her phone, and someone else will play the sponsor. Then we'll step out of role and talk it through as engineers. Expect us to ask "why?" a lot, which says nothing about whether we liked your answer.</p>
+    <p>If something in this brief is unclear, that's probably on purpose. Decide, write down what you decided, and move on.</p>
+    <p class="signoff">Good luck, and have fun with it.<br><strong>The Limineer venture team</strong></p>
+      <nav class="pager" aria-label="Page navigation"><a class="pg prev" href="#task">← Your task</a><span></span></nav>
+  </section>
+</div>
+
+<script>
+(function () {
+  var ids = ["overview", "primer", "rubric", "data", "task", "submit"];
+  var pages = ids.map(function (id) { return document.getElementById(id); });
+  function show() {
+    var id = (location.hash || "").slice(1);
+    if (ids.indexOf(id) === -1) id = "overview";
+    pages.forEach(function (p) { p.hidden = p.id !== id; });
+    document.querySelectorAll(".tabs a").forEach(function (a) {
+      if (a.dataset.tab === id) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest", inline: "nearest" }); }
+      else a.removeAttribute("aria-current");
+    });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", show);
+  show();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1615 @@
+{
+  "exported_at": "2026-09-21",
+  "country": "Republic of Vessmark (fictional)",
+  "sites": [
+    {
+      "site_id": "S-001",
+      "name": "Brisk Lane Yard",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 50.3,
+        "y": 36.1
+      },
+      "parcel_id": "AL-1013",
+      "sources": {
+        "gridmap": {
+          "headroom": 2.3,
+          "substation_distance_km": 4.1,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1300,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 2.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-17",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-26",
+          "author": "JK",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-002",
+      "name": "Farrow Bridge Yard",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 24.39,
+        "y": 66.79
+      },
+      "parcel_id": "NH-4014",
+      "sources": {
+        "gridmap": {
+          "headroom": 2200,
+          "substation_distance_km": 1.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-12",
+          "author": "AV",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-13",
+          "author": "AV",
+          "text": "Neighbours we spoke to were indifferent."
+        }
+      ]
+    },
+    {
+      "site_id": "S-003",
+      "name": "Kessby Old Quarry Yard",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 12.4,
+        "y": 33.1
+      },
+      "parcel_id": "AL-1043",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.6,
+          "substation_distance_km": 0.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2100,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-09-12"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-19",
+          "author": "MA",
+          "text": "Owner signed the letter of intent. Wants 12% revenue share.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-09-03",
+          "author": "MA",
+          "text": "Council planning committee minutes record support for local storage on this plot."
+        }
+      ]
+    },
+    {
+      "site_id": "S-004",
+      "name": "Cotter Hill Land",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 65.5,
+        "y": 41.0
+      },
+      "parcel_id": "SV-1052",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:08:00Z"
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 3.4,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-09",
+          "author": "RS",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-08",
+          "author": "RS",
+          "text": "Neighbours we spoke to were indifferent."
+        }
+      ]
+    },
+    {
+      "site_id": "S-005",
+      "name": "Dalby Works",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "grid_ref_km": {
+        "x": 4.8,
+        "y": 37.0
+      },
+      "parcel_id": "TR-1065",
+      "sources": {
+        "gridmap": {
+          "headroom": 2.6,
+          "substation_distance_km": 2.0,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.8,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-19",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-006",
+      "name": "Ulven Works Site",
+      "region": "Nordholm",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 27.4,
+        "y": 55.41
+      },
+      "parcel_id": "NH-4042",
+      "sources": {
+        "gridmap": {
+          "headroom": 1700,
+          "substation_distance_km": 0.6,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2300,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-16",
+          "author": "AV",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-17",
+          "author": "AV",
+          "text": "Council planning committee minutes record support for local storage on this plot."
+        }
+      ]
+    },
+    {
+      "site_id": "S-007",
+      "name": "Tallow Cross Brownfield",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 13.0,
+        "y": 27.7
+      },
+      "parcel_id": "AL-1066",
+      "sources": {
+        "gridmap": {
+          "headroom": 1.6,
+          "substation_distance_km": 0.7,
+          "data_as_of": "2026-03-31",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2000,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 5.2,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-22",
+          "author": "MA",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-22",
+          "author": "MA",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing."
+        }
+      ]
+    },
+    {
+      "site_id": "S-008",
+      "name": "Kilnbury Common Edge",
+      "region": "Aldmark",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 4.1,
+        "y": 41.8
+      },
+      "parcel_id": "AL-1003",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:14:00Z"
+        },
+        "landreg": {
+          "area_m2": 3000,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-11",
+          "author": "MA",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-11",
+          "author": "MA",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-009",
+      "name": "Esk Mill Land",
+      "region": "Aldmark",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 9.9,
+        "y": 36.5
+      },
+      "parcel_id": "AL-1011",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.9,
+          "substation_distance_km": 0.7,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2600,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2018-04-20"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-14",
+          "author": "MA",
+          "text": "Owner signed the letter of intent. Owner very keen.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-09-10",
+          "author": "MA",
+          "text": "Municipal ecologist says the northern third of the plot falls inside the Esker Meadows reserve designated in 2024. Needs checking before we go further."
+        },
+        {
+          "date": "2026-08-05",
+          "author": "MA",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing."
+        }
+      ]
+    },
+    {
+      "site_id": "S-010",
+      "name": "Eller Road Plot",
+      "region": "Aldmark",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 75.7,
+        "y": 15.8
+      },
+      "parcel_id": "AL-1130",
+      "sources": {
+        "gridmap": {
+          "headroom": 3.9,
+          "substation_distance_km": 2.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "high",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-17",
+          "author": "RS",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-23",
+          "author": "RS",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'."
+        }
+      ]
+    },
+    {
+      "site_id": "S-011",
+      "name": "Hollin Road Brownfield",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 15.8,
+        "y": 29.4
+      },
+      "parcel_id": "AL-1107",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:11:00Z"
+        },
+        "landreg": {
+          "area_m2": 1900,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.8,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-09",
+          "author": "MA",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-14",
+          "author": "MA",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-012",
+      "name": "Nesby Rail Sidings",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 20.49,
+        "y": 67.87
+      },
+      "parcel_id": "NH-4084",
+      "sources": {
+        "gridmap": {
+          "headroom": 1800,
+          "substation_distance_km": 2.2,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1900,
+          "flood_zone": "medium",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-22",
+          "author": "AV",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-013",
+      "name": "Rook Street Plot",
+      "region": "Aldmark",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 18.2,
+        "y": 31.0
+      },
+      "parcel_id": "AL-1090",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.3,
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2400,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2017-02-11"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-28",
+          "author": "MA",
+          "text": "Southern half was sold for housing last year; roughly 700 m² remains. Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-28",
+          "author": "MA",
+          "text": "Council planning committee minutes record support for local storage on this plot."
+        }
+      ]
+    },
+    {
+      "site_id": "S-014",
+      "name": "Orlund Depot Yard",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 40.2,
+        "y": 11.7
+      },
+      "parcel_id": "SV-2108",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.1,
+          "substation_distance_km": 1.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1600,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-11",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-02",
+          "author": "JK",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing."
+        }
+      ]
+    },
+    {
+      "site_id": "S-015",
+      "name": "Fenwick Depot",
+      "region": "Sveld",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 62.0,
+        "y": 3.8
+      },
+      "parcel_id": "SV-1195",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:17:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 2.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-09",
+          "author": "MA",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-16",
+          "author": "MA",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-016",
+      "name": "Glaze Farm Edge",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 44.1,
+        "y": 47.4
+      },
+      "parcel_id": "TR-1208",
+      "sources": {
+        "gridmap": {
+          "headroom": 3.5,
+          "substation_distance_km": 2.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.1,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-02",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-19",
+          "author": "RS",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'."
+        }
+      ]
+    },
+    {
+      "site_id": "S-017",
+      "name": "Brekke Depot",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 41.2,
+        "y": 17.85
+      },
+      "parcel_id": "SV-2291",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.7,
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-02",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-07-02",
+          "author": "JK",
+          "text": "Neighbours we spoke to were indifferent."
+        }
+      ]
+    },
+    {
+      "site_id": "S-018",
+      "name": "Grelle Harbour Plot",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 28.72,
+        "y": 62.28
+      },
+      "parcel_id": "NH-4126",
+      "sources": {
+        "gridmap": {
+          "headroom": 4600,
+          "substation_distance_km": 0.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1700,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-10",
+          "author": "AV",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-12",
+          "author": "AV",
+          "text": "Council planning committee minutes record support for local storage on this plot."
+        }
+      ]
+    },
+    {
+      "site_id": "S-019",
+      "name": "Moss End Farm",
+      "region": "Sveld",
+      "site_type": "farm_edge",
+      "grid_ref_km": {
+        "x": 52.8,
+        "y": 6.4
+      },
+      "parcel_id": "SV-2160",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:14:00Z"
+        },
+        "landreg": {
+          "area_m2": 2200,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "private",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-19",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-020",
+      "name": "Brannoch Depot",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 38.1,
+        "y": 19.9
+      },
+      "parcel_id": "SV-2177",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.2,
+          "substation_distance_km": 1.1,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-06-02",
+          "author": "JK",
+          "text": "Owner not contacted yet.",
+          "owner_status": "not_contacted"
+        },
+        {
+          "date": "2026-09-05",
+          "author": "JK",
+          "text": "Owner declined to lease. Board voted against. Revisit in 2027.",
+          "owner_status": "refused"
+        },
+        {
+          "date": "2026-07-20",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms. Very positive first call.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-07-21",
+          "author": "JK",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-021",
+      "name": "Selby Quay Yard",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 47.5,
+        "y": 13.3
+      },
+      "parcel_id": "SV-2203",
+      "sources": {
+        "gridmap": {
+          "headroom": 2.4,
+          "substation_distance_km": 1.8,
+          "data_as_of": "2026-03-31",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1700,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.9,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-30",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-30",
+          "author": "JK",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'."
+        }
+      ]
+    },
+    {
+      "site_id": "S-022",
+      "name": "Harl Quarry",
+      "region": "Aldmark",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 62.7,
+        "y": 31.0
+      },
+      "parcel_id": "AL-1286",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:23:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.1,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-17",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-023",
+      "name": "Hask Common",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 21.25,
+        "y": 68.69
+      },
+      "parcel_id": "NH-4161",
+      "sources": {
+        "gridmap": {
+          "headroom": 950,
+          "substation_distance_km": 3.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2600,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-15",
+          "author": "AV",
+          "text": "Owner not contacted yet.",
+          "owner_status": "not_contacted"
+        }
+      ]
+    },
+    {
+      "site_id": "S-024",
+      "name": "Pellick Lane Plot",
+      "region": "Sveld",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 44.7,
+        "y": 15.2
+      },
+      "parcel_id": "SV-2250",
+      "sources": {
+        "gridmap": {
+          "headroom": 5.0,
+          "substation_distance_km": 0.6,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": null,
+        "vendor_estimate": null
+      },
+      "field_notes": []
+    },
+    {
+      "site_id": "S-025",
+      "name": "Ingle Street Yard",
+      "region": "Sveld",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 51.2,
+        "y": 53.1
+      },
+      "parcel_id": "SV-1325",
+      "sources": {
+        "gridmap": {
+          "headroom": 2.0,
+          "substation_distance_km": 1.7,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "medium",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.7,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-04",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-07",
+          "author": "JK",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-026",
+      "name": "Dunmere Council Plot",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 66.3,
+        "y": 49.8
+      },
+      "parcel_id": "TR-3240",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:27:00Z"
+        },
+        "landreg": {
+          "area_m2": 1300,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 4.3,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-28",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-09-01",
+          "author": "RS",
+          "text": "Council planning committee minutes record support for local storage on this plot."
+        }
+      ]
+    },
+    {
+      "site_id": "S-027",
+      "name": "Varne Farm Edge",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "grid_ref_km": {
+        "x": 71.9,
+        "y": 44.0
+      },
+      "parcel_id": "TR-3317",
+      "sources": {
+        "gridmap": {
+          "headroom": 5.5,
+          "substation_distance_km": 0.5,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1400,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "private",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 5.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-30",
+          "author": "RS",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-21",
+          "author": "RS",
+          "text": "Council has no formal position yet; officer said 'depends on the noise report'."
+        }
+      ]
+    },
+    {
+      "site_id": "S-028",
+      "name": "Jessop Common",
+      "region": "Tarrow",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 50.9,
+        "y": 39.6
+      },
+      "parcel_id": "TR-1364",
+      "sources": {
+        "gridmap": {
+          "headroom": 1.9,
+          "substation_distance_km": 2.3,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1100,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.8,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-18",
+          "author": "MA",
+          "text": "Owner signed the letter of intent.",
+          "owner_status": "loi_signed"
+        },
+        {
+          "date": "2026-08-27",
+          "author": "MA",
+          "text": "Local energy co-op wrote to the council backing the project."
+        }
+      ]
+    },
+    {
+      "site_id": "S-029",
+      "name": "Kirkby Sidings",
+      "region": "Aldmark",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 49.2,
+        "y": 7.8
+      },
+      "parcel_id": "AL-1377",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:32:00Z"
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "high",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.4,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-11",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-01",
+          "author": "JK",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing."
+        }
+      ]
+    },
+    {
+      "site_id": "S-030",
+      "name": "Tofte Industrial Estate",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 31.95,
+        "y": 68.04
+      },
+      "parcel_id": "NH-4210",
+      "sources": {
+        "gridmap": {
+          "headroom": 2900,
+          "substation_distance_km": 1.1,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1350,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-22",
+          "author": "AV",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-24",
+          "author": "AV",
+          "text": "Residents' association has started a petition against 'industrial batteries' next to the school."
+        }
+      ]
+    },
+    {
+      "site_id": "S-031",
+      "name": "Brekke Municipal Depot",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 41.23,
+        "y": 17.83
+      },
+      "parcel_id": "SV-2291",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.7,
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1800,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-08",
+          "author": "AV",
+          "text": "Owner signed the letter of intent. (Brekke depot, finally.)",
+          "owner_status": "loi_signed"
+        }
+      ]
+    },
+    {
+      "site_id": "S-032",
+      "name": "Ashcombe Field Corner",
+      "region": "Tarrow",
+      "site_type": "farm_edge",
+      "grid_ref_km": {
+        "x": 69.4,
+        "y": 41.2
+      },
+      "parcel_id": "TR-3301",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.5,
+          "substation_distance_km": 1.0,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "private",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 2.1,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-02",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-033",
+      "name": "Heron Marsh Plot",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 77.0,
+        "y": 52.3
+      },
+      "parcel_id": "TR-3350",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.8,
+          "substation_distance_km": 0.6,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 2500,
+          "flood_zone": "none",
+          "protected_area": true,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-01",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-034",
+      "name": "Vinstra Old Dairy",
+      "region": "Nordholm",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 30.92,
+        "y": 57.85
+      },
+      "parcel_id": "NH-4238",
+      "sources": {
+        "gridmap": {
+          "headroom": 5100,
+          "substation_distance_km": 4.2,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1100,
+          "flood_zone": "medium",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-26",
+          "author": "AV",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-11",
+          "author": "AV",
+          "text": "Neighbours we spoke to were indifferent."
+        }
+      ]
+    },
+    {
+      "site_id": "S-035",
+      "name": "Lorn Field",
+      "region": "Sveld",
+      "site_type": "brownfield",
+      "grid_ref_km": {
+        "x": 24.9,
+        "y": 54.9
+      },
+      "parcel_id": "SV-1455",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:35:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "high",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 3.0,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-16",
+          "author": "MA",
+          "text": "Owner not contacted yet.",
+          "owner_status": "not_contacted"
+        },
+        {
+          "date": "2026-08-28",
+          "author": "MA",
+          "text": "Neighbours we spoke to were indifferent."
+        }
+      ]
+    },
+    {
+      "site_id": "S-036",
+      "name": "Gorse Hill Yard",
+      "region": "Tarrow",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 74.1,
+        "y": 38.6
+      },
+      "parcel_id": "TR-3399",
+      "sources": {
+        "gridmap": {
+          "headroom": 4.4,
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": null,
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-09-12",
+          "author": "RS",
+          "text": "Drove past. Yard looks disused and big. No idea who owns it."
+        }
+      ]
+    },
+    {
+      "site_id": "S-037",
+      "name": "Merrow Depot",
+      "region": "Tarrow",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 61.0,
+        "y": 35.0
+      },
+      "parcel_id": "TR-1481",
+      "sources": {
+        "gridmap": {
+          "headroom": 3.7,
+          "substation_distance_km": 2.8,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "none",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-14",
+          "author": "RS",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-23",
+          "author": "RS",
+          "text": "Met the ward councillor; she is openly in favour and offered to speak at the hearing."
+        }
+      ]
+    },
+    {
+      "site_id": "S-038",
+      "name": "Nab End Plot",
+      "region": "Aldmark",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 13.4,
+        "y": 51.8
+      },
+      "parcel_id": "AL-1494",
+      "sources": {
+        "gridmap": {
+          "headroom": null,
+          "substation_distance_km": null,
+          "data_as_of": null,
+          "fetched_at": "2026-09-02T14:06:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 3.9,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-20",
+          "author": "JK",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        }
+      ]
+    },
+    {
+      "site_id": "S-039",
+      "name": "Oddan Car Park",
+      "region": "Nordholm",
+      "site_type": "municipal_land",
+      "grid_ref_km": {
+        "x": 29.55,
+        "y": 60.75
+      },
+      "parcel_id": "NH-4273",
+      "sources": {
+        "gridmap": {
+          "headroom": 1300,
+          "substation_distance_km": 0.9,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 900,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": null
+      },
+      "field_notes": [
+        {
+          "date": "2026-08-13",
+          "author": "AV",
+          "text": "Owner not contacted yet.",
+          "owner_status": "not_contacted"
+        }
+      ]
+    },
+    {
+      "site_id": "S-040",
+      "name": "Otterley Works",
+      "region": "Sveld",
+      "site_type": "depot_yard",
+      "grid_ref_km": {
+        "x": 39.0,
+        "y": 36.9
+      },
+      "parcel_id": "SV-1520",
+      "sources": {
+        "gridmap": {
+          "headroom": 1.9,
+          "substation_distance_km": 3.4,
+          "data_as_of": "2026-06-30",
+          "fetched_at": "2026-09-02T09:12:00Z"
+        },
+        "landreg": {
+          "area_m2": 1500,
+          "flood_zone": "low",
+          "protected_area": false,
+          "owner_type": "municipal",
+          "record_date": "2025-11-03"
+        },
+        "vendor_estimate": {
+          "headroom_mw_est": 1.7,
+          "band_pct": 40,
+          "estimated_at": "2026-09-15"
+        }
+      },
+      "field_notes": [
+        {
+          "date": "2026-07-08",
+          "author": "MA",
+          "text": "Good first call with the owner, sending heads of terms.",
+          "owner_status": "in_talks"
+        },
+        {
+          "date": "2026-08-27",
+          "author": "MA",
+          "text": "Councillor raised fire-safety objections at last month's meeting; expect a fight."
+        }
+      ]
+    }
+  ]
+}

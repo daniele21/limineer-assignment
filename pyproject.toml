@@ -1,0 +1,16 @@
+[project]
+name = "field-note-extractor"
+version = "0.1.0"
+description = "Conservative, evidence-backed field-note extraction with Claude."
+requires-python = ">=3.11"
+dependencies = ["anthropic>=1.0,<2", "pydantic>=2.10,<3", "python-dotenv>=1,<2"]
+
+[project.scripts]
+extract-notes = "field_notes.__main__:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
