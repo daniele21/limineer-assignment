@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "predeploy": ["python3 scripts/prepare_hosting.py"]
+  }
+}

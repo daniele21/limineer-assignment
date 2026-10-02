@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5ecd4">
+  <meta name="description" content="Five community battery sites for Maren, with clear next steps, evidence and optional assumptions.">
+  <title>Five sites for Thursday · Limineer</title>
+  <style>/* STYLES */</style>
+</head>
+<body>
+  <a class="skip-link" href="#shortlist">Skip to the five sites</a>
+  <div class="brand-stripe" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#" aria-label="Limineer, back to top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>limineer<span class="brand-dot">.</span></a>
+    <span class="header-note">Prepared for <strong>Maren</strong></span>
+  </header>
+  <main class="workspace">
+    <div class="primary">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Community batteries</p>
+        <h1 id="page-title">Five sites for Thursday<span class="title-dot">.</span></h1>
+        <p class="intro-copy">Which sites to take forward, and what to check first.</p>
+      </section>
+      <section id="shortlist" aria-labelledby="list-title">
+        <div class="assumption-bar"><button class="refine-button" type="button" data-open-questions="0"><span><strong>Make this shortlist more accurate</strong><small id="refine-progress">Answer 4 quick questions to make the recommendation fit your priorities</small></span><span class="refine-arrow" aria-hidden="true">↗</span></button><div class="assumption-status"><span id="assumption-state">Conservative defaults</span><button class="reset-button" id="reset-main" type="button" hidden>Reset</button></div></div>
+        <div class="list-heading"><div><h2 id="list-title">Top five</h2><p id="ranking-basis">Recommended from current evidence</p></div><button class="compare-toggle" id="compare-toggle" type="button" aria-pressed="false"><span class="toggle-track" aria-hidden="true"><i></i></span>Compare scenarios</button></div>
+        <div class="comparison-guide" id="comparison-guide" hidden><div class="comparison-guide-heading"><strong>What would change?</strong><span>Now <span aria-hidden="true">→</span> <span id="comparison-target-name">Potential</span></span></div><div class="comparison-options" role="group" aria-label="Compare current recommendation with"><button type="button" data-compare-target="potential" aria-pressed="true">Potential <small>If assumptions hold</small></button><button type="button" data-compare-target="evidence" aria-pressed="false">Evidence only <small>Without assumed improvements</small></button></div><p id="comparison-explanation"></p></div>
+        <ol class="site-list" id="site-list"></ol>
+        <p class="list-footnote">Tied sites have equal priority. Site checks still apply.</p>
+      </section>
+      <details class="secondary-disclosure"><summary><span><strong>Before the sponsor meeting</strong></span><span class="plus" aria-hidden="true">+</span></summary><div class="method-content"><ol class="next-list"><li><span>01</span><div><strong>Confirm the connection.</strong><p>Ask the grid operator to verify capacity, cable route and cost.</p></div></li><li><span>02</span><div><strong>Verify the footprint.</strong><p>Measure usable land and check flood, access and planning constraints.</p></div></li><li><span>03</span><div><strong>Close the remaining agreements.</strong><p>Resolve lease terms and any conditions on local support.</p></div></li></ol></div></details>
+      <details class="secondary-disclosure" id="alternatives"><summary><span><strong>Why the other sites aren't in the five</strong><small>Stronger alternatives, missing checks or a firm exclusion</small></span><span class="plus" aria-hidden="true">+</span></summary><div id="alternative-list" class="alternative-list"></div></details>
+      <details class="secondary-disclosure"><summary><span><strong>Why this shortlist is defensible</strong><small>Evidence first. Assumptions explicit.</small></span><span class="plus" aria-hidden="true">+</span></summary><div class="method-content"><p><strong>Same criteria for every site.</strong> Grid connection, agreements, land and flood risk determine priority.</p><p><strong>Recorded evidence comes first.</strong> Unknown support earns no credit. Critical gaps stay outside the five; owner refusal and confirmed protection exclude a site.</p><p><strong>Potential means verify first.</strong> Assumptions identify what to investigate, not what is already confirmed. Tied sites have equal priority.</p><details class="evidence-disclosure"><summary>Inspect the scoring method <span aria-hidden="true">↗</span></summary><p>Each criterion earns a tier from 0 to 5. Its contribution is weight × tier ÷ 5. Contributions add up to a maximum of 100.</p><div id="rubric-list"></div><p><strong>Conservative:</strong> official figures and recorded evidence. Unknown support earns no extra points and remains unknown. Sites with critical gaps stay on hold.</p><p><strong>Risky upside:</strong> favourable, unverified assumptions, including eligible vendor estimates and support if confirmed. This is a scenario score, not a probability or guaranteed upper bound.</p><p>Parcel area is a proxy for usable land. A signed letter of intent is non-binding. Protection and owner refusal always exclude a site. Duplicate parcels are counted once.</p><p>Answers change the selected assumptions, never the source evidence. Unanswered questions use conservative defaults. Your choices stay in this tab until you reset them.</p></details></div></details>
+      <footer class="footer"><span>Limineer · Venture validation</span><span id="data-date"></span><p>Fictional sites in the Republic of Vessmark. Screening for feasibility studies; construction readiness requires further checks.</p></footer>
+    </div>
+  </main>
+  <div id="live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <dialog id="questions-dialog" aria-labelledby="question-title" aria-describedby="question-explanation">
+    <div class="dialog-top"><span class="eyebrow">Make this shortlist more accurate</span><button class="icon-button" id="close-dialog" type="button" aria-label="Close questions and return to shortlist" title="Return to shortlist">×</button></div>
+    <div class="question-progress" id="question-progress"></div>
+    <div class="question-body" id="question-body"></div>
+    <div class="question-impact" id="question-impact" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="dialog-bottom"><button class="secondary-button" id="previous-question" type="button">Back</button><button class="primary-button" id="next-question" type="button">Next question <span aria-hidden="true">→</span></button></div>
+    <p class="dialog-footnote">Changes apply immediately. Unanswered questions keep their defaults.</p>
+    <button class="reset-button" id="reset-questions" type="button">Reset all to conservative</button>
+  </dialog>
+  <dialog class="breakdown-dialog" id="breakdown-dialog" aria-labelledby="breakdown-title">
+    <div class="breakdown-header"><div><p class="eyebrow">Score breakdown</p><h2 id="breakdown-title"></h2><p class="breakdown-meta" id="breakdown-meta"></p></div><button class="icon-button" id="close-breakdown" type="button" aria-label="Close score breakdown and return to shortlist" title="Return to shortlist">×</button></div>
+    <div class="breakdown-content" id="breakdown-content"></div>
+  </dialog>
+  <noscript><p class="noscript">Enable JavaScript to view the interactive shortlist. No network or API connection is required.</p></noscript>
+  <script id="scoring-data" type="application/json">/* DATA */</script>
+  <script>/* APPLICATION */</script>
+</body>
+</html>
